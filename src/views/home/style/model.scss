@@ -1,0 +1,10 @@
+.model {
+	margin: 0 auto;
+	&--header {
+		height: 40px;
+		color: #ffffff;
+		line-height: 40px;
+		padding-left: 10px;
+		background:linear-gradient(90deg,rgba(37,70,154,0.67),rgba(19,151,189,0.1));
+	}
+}

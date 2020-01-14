@@ -1,0 +1,74 @@
+.home {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	padding: 30px;
+	box-sizing: border-box;
+	background: url('../../assets/imgs/main_back.png') no-repeat;
+	background-size: 100% 100%;
+	&--left {
+		width: 350px;
+		height: 100%;
+		margin-right: 10px;
+	}
+	&--main {
+		flex: 1;
+		height: 100%;
+		&_top {
+			height: 50%;
+			width: 100%;
+			margin-bottom: 20px;
+			background-size: 103% 104%;
+			.tree{
+				&--container {
+					position: relative;
+					&_list {
+						position: absolute;
+						right: 2vw;
+						top: 5px;
+					}
+				}
+			}
+		}
+		&_bottom {
+			height: 50%;
+			width: 100%;
+		}
+	}
+	&--right {
+		width: 350px;
+		height: 100%;
+		margin-left: 10px;
+	}
+	&--person {
+		height: 40%;
+		background: url('../../assets/imgs/frame.png') no-repeat -5px;
+		background-size: 103% 104%;
+		margin-bottom: 20px;
+		&_container {
+			min-height: 300px;
+		}
+	}
+	&--list {
+		height: 55%;
+		background: url('../../assets/imgs/frame.png') no-repeat -5px;
+		background-size: 103% 104%;
+	}
+	&--bubble {
+		height: 45%;
+		background: url('../../assets/imgs/frame.png') no-repeat -5px;
+		background-size: 103% 104%;
+		margin-bottom: 20px;
+		&_container {
+			background: url('../../assets/imgs/bubble_back.png') no-repeat center -5px;
+			background-size: 260px 280px;
+			padding-top: 20px;
+			height: 100%;
+		}
+	}
+	&--link {
+		height: 50%;
+		background: url('../../assets/imgs/frame.png') no-repeat -5px;
+		background-size: 103% 104%;
+	}
+}

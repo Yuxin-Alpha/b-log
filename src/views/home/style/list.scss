@@ -1,0 +1,20 @@
+.tree{
+	&--list {
+		text-align: right;
+		&_item {
+			color: #fff;
+			cursor: pointer;
+			font-size: 14px;
+			margin: 10px 0;
+			list-style: none;
+		}
+		.active-item {
+			color: #00baff;
+			cursor: pointer;
+			font-size: 14px;
+			margin: 10px 0;
+			list-style: none;
+			font-weight: 600;
+		}
+	}
+}
