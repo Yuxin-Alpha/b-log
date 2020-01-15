@@ -19,7 +19,7 @@ export const navData = [
 	{id: 5, text: 'Data'},
 	{id: 6, text: 'GoLang'},
 	{id: 7, text: 'Node'},
-	{id: 8, text: 'Linux'},
+	{id: 8, text: 'Webpack'},
 	{id: 9, text: 'SQL'},
 	{id: 10, text: 'Net'},
 ]
@@ -55,14 +55,15 @@ const JavaScript = {
 						{ name: "match()", menu: 'JavaScript211' },
 						{ name: "replace()", menu: 'JavaScript212' }
 					]
-				}
+				},
+				{ name: "模板字符串", menu: 'JavaScript3109' },
 			]
 		},
 		{
 			name: "Function",
 			menu: 'JavaScript3',
 			children: [
-				{ name: "this", menu: 'JavaScript31' },
+				{ name: "this", menu: 'javascript/function/this.md' },
 				{ name: "apply()&call()", menu: 'JavaScript32' },
 				{ name: "bind()", menu: 'JavaScript33' },
 				{
@@ -70,7 +71,6 @@ const JavaScript = {
 					menu: 'JavaScript34',
 					children: [{ name: "函数柯里化", menu: 'JavaScript341'}]
 				},
-				{ name: "原型&原型链", menu: 'JavaScript35'},
 				{ name: "generator", menu: 'JavaScript36' }
 			]
 		},
@@ -78,25 +78,20 @@ const JavaScript = {
 			name: "Object",
 			menu: 'JavaScript4',
 			children: [
-				{
-					name: "对象特性",
-					menu: 'JavaScript41',
-					children: [
-						{ name: "new()", menu: 'JavaScript411' },
-						{ name: "Proxy", menu: 'JavaScript412' },
-						{ name: "Reflect", menu: 'JavaScript413' }
-					]
-				},
+				{ name: "对象特性", menu: 'JavaScript41', },
+				{ name: "new()", menu: 'JavaScript411' },
+				{ name: "原型&原型链", menu: 'JavaScript35'},
+				{ name: "Proxy", menu: 'JavaScript412' },
+				{ name: "Reflect", menu: 'JavaScript413' },
 				{
 					name: "Class",
 					menu: 'JavaScript42',
 					children: [
-						{ name: "构造函数与普通函数", menu: 'JavaScript421' },
 						{ name: "静态属性", menu: 'JavaScript422' },
 						{ name: "继承", menu: 'JavaScript423' },
-						{ name: "装饰器", menu: 'JavaScript424' }
 					]
-				}
+				},
+				{ name: "装饰器", menu: 'JavaScript424' }
 			]
 		},
 		{
@@ -115,137 +110,241 @@ const JavaScript = {
 						{ name: "race()", menu: 'JavaScript533' }
 					]
 				},
+				{
+					name: "generator+co",
+					menu: 'javascript/async/generator.md'
+				},
 				{ name: "async&await", menu: 'JavaScript54' }
 			]
 		}
 	]
 };
-
-const Node = {
-	name: "Node",
+const CSS = {
 	children: [
 		{
-			name: "buffer",
-			children: [{ name: "FlareVis", value: 4116 }]
-		},
-		{
-			name: "fs",
-			children: [{ name: "FlareVis", value: 4116 }]
-		},
-		{
-			name: "stream",
-			children: [{ name: "IScaleMap", value: 2105 }]
-		},
-		{
-			name: "http",
-			children: [{ name: "DirtySprite", menu: 'JavaScript1' }]
-		},
-		{
-			name: "koa",
-			children: [{ name: "DirtySprite", menu: 'JavaScript1' }]
-		},
-		{
-			name: "egg",
-			children: [{ name: "DirtySprite", menu: 'JavaScript1' }]
-		}
-	]
-};
-
-const TypeScript = {
-	name: "TypeScript",
-	children: [
-		{
-			name: "类型",
+			name: "元素",
+			menu: "Css1",
 			children: [
-				{ name: "类型检查", value: 4116 },
-				{ name: "类型推论", value: 4116 }
+				{ name: "行内元素", menu: 'css/element/inline.md' },
+				{ name: "块级元素", menu: 'css/element/block.md' },
+				{ name: "BFC&IFC", menu: 'css/element/FC.md' },
 			]
 		},
 		{
-			name: "接口",
-			children: [{ name: "FlareVis", value: 4116 }]
-		},
-		{
-			name: "泛型",
-			children: [{ name: "IScaleMap", value: 2105 }]
-		},
-		{
-			name: "Class",
-			children: [{ name: "装饰器", menu: 'JavaScript1' }]
-		},
-		{
-			name: "TS+React",
-			children: [{ name: "DirtySprite", menu: 'JavaScript1' }]
-		},
-		{
-			name: "Mixins",
-			children: [{ name: "DirtySprite", menu: 'JavaScript1' }]
-		}
-	]
-};
-const React = {
-	name: "React",
-	children: [
-		{
-			name: "JSX",
-			children: [{ name: "createElement()", value: 4116 }]
-		},
-		{
-			name: "组件",
+			name: "定位",
+			menu: "Css2",
 			children: [
-				{ name: "Component", value: 4116 },
-				{ name: "Function", value: 4116 },
-				{ name: "render()", value: 4116 },
+				{ name: "float", menu: 'css/pos/float.md' },
 				{
-					name: "LifeCycle",
-					children: [
-						{ name: "initialization", value: 4116 },
-						{ name: "mount", value: 4116 },
-						{ name: "update", value: 4116 },
-						{ name: "unMount", value: 4116 }
-					]
+					name: "position",
+					menu: 'css/pos/position.md'
 				}
 			]
 		},
 		{
-			name: "事件处理",
+			name: "CSS3",
+			menu: "Css3",
+			children: [{ name: "box-shadow", menu: 'css/pos/box_shadow.md'}]
+		},
+		{
+			name: "布局",
+			menu: "Css4",
+			children: [
+				{ name: "居中", menu: 'css/design/middle.md' },
+				{ name: "瀑布", menu: 'css/design/design_one.md' }
+			]
+		},
+	]
+};
+const Node = {
+	children: [
+		{
+			name: "buffer",
+			menu: 'node1',
+			children: [{ name: "FlareVis", menu: 'node/buffer/one.md' }, { name: "FlareVis", menu: 'node/buffer/two.md' }]
+		},
+		{
+			name: "fs",
+			menu: 'node2',
+			children: [{ name: "FlareVis", value: 4116 }]
+		},
+		{
+			name: "stream",
+			menu: 'node3',
 			children: [{ name: "IScaleMap", value: 2105 }]
 		},
 		{
-			name: "Context",
+			name: "http",
+			menu: 'node4',
 			children: [{ name: "DirtySprite", menu: 'JavaScript1' }]
+		},
+		{
+			name: "koa",
+			menu: 'node5',
+			children: [{ name: "DirtySprite", menu: 'JavaScript1' }]
+		},
+		{
+			name: "egg",
+			menu: 'node6',
+			children: [{ name: "DirtySprite", menu: 'JavaScript1' }]
+		}
+	]
+};
+
+const Data = {
+	children: [
+		{
+			name: "线性表",
+			menu: 'data1',
+			children: [
+				{ name: "栈", menu: 'data/linear/stack.md' },
+				{ name: "队列", menu: 'data/linear/queue.md' },
+				{ name: "链表", menu: 'data/linear/link.md' },
+			]
+		},
+		{
+			name: "树",
+			menu: 'data2',
+			children: [{ name: "FlareVis", value: 4116 }]
+		},
+		{
+			name: "堆",
+			menu: 'data3',
+			children: [{ name: "IScaleMap", value: 2105 }]
+		},
+		{
+			name: "位运算",
+			menu: 'data4',
+			children: [{ name: "DirtySprite", menu: 'JavaScript1' }]
+		},
+		{
+			name: "排序",
+			menu: 'data5',
+			children: [{ name: "DirtySprite", menu: 'JavaScript2' }]
+		},
+		{
+			name: "查找",
+			menu: 'data6',
+			children: [{ name: "DirtySprite", menu: 'JavaScript4' }]
+		},
+		{
+			name: "动态规划",
+			menu: 'data7',
+			children: [{ name: "DirtySprite", menu: 'JavaScript5' }]
+		}
+	]
+}
+const TypeScript = {
+	children: [
+		{
+			name: "类型",
+			menu: "TS1",
+			children: [
+				{ name: "类型检查", menu: 'typescript/type/check.md' },
+				{ name: "类型推论", menu: 'typescript/type/infer.md' }
+			]
+		},
+		{
+			name: "接口",
+			menu: "TS2",
+			children: [{ name: "介绍", menu: 'typescript/interface/intro.md' }]
+		},
+		{
+			name: "泛型",
+			menu: "TS3",
+			children: [{ name: "介绍", menu: 'typescript/generic/intro.md' }]
+		},
+		{
+			name: "Class",
+			menu: "TS4",
+			children: [{ name: "介绍", menu: 'typescript/class/intro.md' }, 
+			{ name: "装饰器", menu: 'typescript/generic/disc.md' }]
+		},
+		{
+			name: "使用拓展",
+			menu: "TS5",
+			children: [
+				{ name: "Mixin", menu: 'typescript/extend/mixin.md' },
+				{ name: "TS + React", menu: 'typescript/extend/react.md' },
+				{ name: "TS + Vue", menu: 'typescript/extend/vue.md' }
+			]
+		}
+	]
+};
+const React = {
+	children: [
+		{
+			name: "JSX",
+			menu: "react1",
+			children: [{ name: "createElement()", menu: 'react/jsx/element.md'}]
+		},
+		{
+			name: "组件",
+			menu: "react2",
+			children: [
+				{ name: "Component", menu: 'react/component/component.md'},
+				{ name: "Function", menu: 'react/component/function.md' },
+				{ name: "render()", menu: 'react/component/render.md'},
+			]
+		},
+		{
+			name: "声明周期",
+			menu: "react3",
+			children: [
+				{ name: "initialization", menu: 'react/lifecycle/init.md' },
+				{ name: "mount", menu: 'react/lifecycle/mount.md'  },
+				{ name: "update", menu: 'react/lifecycle/update.md' },
+				{ name: "unMount", menu: 'react/lifecycle/unMount.md'  }
+			]
+		},
+		{
+			name: "事件处理",
+			menu: "react4",
+			children: [{ name: "介绍", menu: 'react/event/intro.md' }]
+		},
+		{
+			name: "Context",
+			menu: "react5",
+			children: [{ name: "介绍", menu: 'react/context/intro.md' }]
 		},
 		{
 			name: "Portals",
-			children: [{ name: "DirtySprite", menu: 'JavaScript1' }]
+			menu: "react6",
+			children: [{ name: "介绍", menu: 'react/portals/intro.md' }]
 		},
 		{
 			name: "Hooks",
+			menu: "react7",
 			children: [
-				{ name: "useState()", menu: 'JavaScript1' },
-				{ name: "useEffect()", menu: 'JavaScript1' }
+				{ name: "useState()", menu: 'react/hooks/state.md' },
+				{ name: "useEffect()", menu: 'react/hooks/effect.md' }
 			]
 		},
 		{
 			name: "DomDiff",
+			menu: "react8",
 			children: [
-				{ name: "useState()", menu: 'JavaScript1' },
-				{ name: "useEffect()", menu: 'JavaScript1' }
+				{ name: "useState()", menu: 'react/diff/one.md' },
+				{ name: "useEffect()", menu: 'react/diff/two.md' }
 			]
 		},
 		{
 			name: "Router",
+			menu: "react9",
 			children: [
-				{ name: "history模式", menu: 'JavaScript1' },
-				{ name: "hash模式", menu: 'JavaScript1' }
+				{ name: "history模式", menu: 'react/router/history.md' },
+				{ name: "hash模式", menu: 'react/router/hash.md' },
+				{ name: "常用API", menu: 'react/router/api.md' }
 			]
 		},
 		{
 			name: "Redux",
+			menu: "react10",
 			children: [
-				{ name: "react-redux", menu: 'JavaScript1' },
-				{ name: "redux-thunk", menu: 'JavaScript1' },
-				{ name: "redux-saga", menu: 'JavaScript1' }
+				{ name: "介绍", menu: 'react/redux/intro.md' },
+				{ name: "react-redux", menu: 'react/redux/react.md' },
+				{ name: "redux-thunk", menu: 'react/redux/thunk.md' },
+				{ name: "redux-saga", menu: 'react/redux/saga.md' }
 			]
 		}
 	]
@@ -256,157 +355,155 @@ const Vue = {
 	children: [
 		{
 			name: "指令",
+			menu: 'Vue1',
 			children: [
-				{ name: "v-bind", value: 4116 },
-				{ name: "v-if&v-show", value: 4116 },
-				{ name: "v-model", value: 4116 },
-				{ name: "v-html", value: 4116 },
-				{ name: "v-for", value: 4116 },
-				{ name: "自定义指令", children: [{ name: "LifeCycle", value: 4116 }] }
+				{ name: "v-bind", menu: 'vue/directive/v_bind.md' },
+				{ name: "v-if&v-show", menu: 'vue/directive/v_if.md'  },
+				{ name: "v-model", menu: 'vue/directive/v_model.md'  },
+				{ name: "v-html", menu: 'vue/directive/v_html.md'  },
+				{ name: "v-for", menu: 'vue/directive/v_for.md'  },
+				{ name: "自定义指令", menu: 'vue/directive/v_directive.md', children: [{ name: "LifeCycle", value: 4116 }] }
 			]
 		},
 		{
 			name: "组件",
+			menu: 'Vue2',
 			children: [
-				{ name: "Component", value: 4116 },
-				{
-					name: "LifeCycle",
-					children: [
-						{ name: "initialization", value: 4116 },
-						{ name: "mount", value: 4116 },
-						{ name: "update", value: 4116 },
-						{ name: "unMount", value: 4116 },
-						{ name: "slot", value: 4116 }
-					]
-				}
+				{ name: "介绍", menu: 'vue/component/intro.md' },
+				{ name: "LifeCycle", menu: 'vue/component/lifecycle.md' }
 			]
 		},
 		{
 			name: "MVVM",
-			children: [{ name: "数据劫持+观察者模式", value: 4116 }]
+			menu: 'Vue3',
+			children: [{ name: "数据劫持+观察者模式", menu: 'vue/design/mvvm.md' }]
 		},
 		{
 			name: "事件处理",
-			children: [{ name: "IScaleMap", value: 2105 }]
+			menu: 'Vue4',
+			children: [{ name: "介绍", menu: 'vue/event/event.md' }]
 		},
 		{
 			name: "Mixins",
-			children: [{ name: "DirtySprite", menu: 'JavaScript1' }]
+			menu: 'Vue5',
+			children: [{ name: "介绍", menu: 'vue/mixin/mixins.md' }]
 		},
 		{
 			name: "Router",
-			children: [{ name: "DirtySprite", menu: 'JavaScript1' }]
+			menu: 'Vue6',
+			children: [{ name: "介绍", menu: 'vue/router/router.md' }, { name: "源码", menu: 'vue/router/resource.md' }]
 		},
 		{
 			name: "Vuex",
+			menu: 'Vue7',
 			children: [
-				{ name: "state", children: [{ name: "mapState()", menu: 'JavaScript1' }] },
-				{ name: "getter", children: [{ name: "mapGetters()", menu: 'JavaScript1' }] },
-				{ name: "action", children: [{ name: "mapAction()", menu: 'JavaScript1' }] },
-				{ name: "mutation", children: [{ name: "mapMutation()", menu: 'JavaScript1' }] }
+				{ name: "state", menu: 'vue/store/state.md' },
+				{ name: "getter", menu: 'vue/store/getter.md' },
+				{ name: "action", menu: 'vue/store/action.md' },
+				{ name: "mutation", menu: 'vue/store/mutation.md' }
 			]
 		},
 		{
-			name: "DomDiff",
+			name: "Vue3.0",
+			menu: 'Vue8',
 			children: [
-				{ name: "useState()", menu: 'JavaScript1' },
-				{ name: "useEffect()", menu: 'JavaScript1' }
+				{ name: "state", menu: 'vue/version/state.md' },
+				{ name: "getter", menu: 'vue/version/getter.md' },
+				{ name: "action", menu: 'vue/version/action.md' },
+				{ name: "mutation", menu: 'vue/version/mutation.md' }
 			]
 		},
 		{
-			name: "Router",
+			name: "使用拓展",
+			menu: 'Vue9',
 			children: [
-				{ name: "history模式", menu: 'JavaScript1' },
-				{ name: "hash模式", menu: 'JavaScript1' }
-			]
-		},
-		{
-			name: "Redux",
-			children: [
-				{ name: "react-redux", menu: 'JavaScript1' },
-				{ name: "redux-thunk", menu: 'JavaScript1' },
-				{ name: "redux-saga", menu: 'JavaScript1' }
+				{ name: "使用拓展1", menu: 'vue/extend/one.md' },
+				{ name: "使用拓展2", menu: 'vue/extend/two.md' }
 			]
 		}
 	]
 };
 
-const Golang = {
-	name: "Golang",
+const GoLang = {
 	children: [
 		{
 			name: "类型",
+			menu: 'go1',
 			children: [
-				{ name: "数组", value: 4116 },
-				{ name: "指针", value: 4116 },
+				{ name: "数组", menu: 'go/type/array.md' },
+				{ name: "指针", menu: 'go/type/pointer.md'},
 				{
 					name: "结构体",
-					children: [
-						{ name: "属性", value: 4116 },
-						{ name: "方法", value: 4116 },
-						{ name: "接口", value: 4116 }
-					]
+					menu: 'go/type/struct.md'
 				}
 			]
 		},
 		{
 			name: "函数",
-			children: [{ name: "闭包", value: 4116 }]
+			menu: 'go2',
+			children: [{ name: "闭包", menu: 'go/type/struct.md' }]
 		},
 		{
 			name: "指针",
-			children: [{ name: "数据劫持+观察者模式", value: 4116 }]
+			menu: 'go3',
+			children: [{ name: "数据劫持+观察者模式", menu: 'go/three/one.md' }]
 		},
 		{
 			name: "协程",
+			menu: 'go4',
 			children: [
-				{ name: "打点器", value: 4116 },
-				{ name: "状态协程", value: 4116 }
+				{ name: "打点器", menu: 'go/four/one.md' },
+				{ name: "状态协程", menu: 'go/four/two.md' }
 			]
 		},
 		{
 			name: "通道",
+			menu: 'go5',
 			children: [
-				{ name: "缓冲", value: 2105 },
-				{ name: "方向", value: 2105 },
-				{ name: "同步", value: 2105 },
-				{ name: "选择器", value: 2105 },
-				{ name: "超时处理", value: 2105 },
-				{ name: "阻塞与非阻塞", value: 2105 }
+				{ name: "缓冲", menu: 'go/five/one.md' },
+				{ name: "方向", menu: 'go/five/two.md' },
+				{ name: "同步", menu: 'go/five/three.md' },
+				{ name: "选择器", menu: 'go/five/four.md' },
+				{ name: "超时处理", menu: 'go/five/five.md' },
+				{ name: "阻塞与非阻塞", menu: 'go/five/six.md' }
 			]
 		},
 		{
 			name: "文件操作",
-			children: [{ name: "DirtySprite", menu: 'JavaScript1' }]
+			menu: 'go6',
+			children: [{ name: "DirtySprite", menu: 'go/six/one.md' }]
 		},
 		{
 			name: "网络",
-			children: [{ name: "DirtySprite", menu: 'JavaScript1' }]
+			menu: 'go7',
+			children: [{ name: "DirtySprite", menu: 'go/seven/five.md' }]
 		},
 		{
-			name: "Beggo",
+			name: "Beego",
+			menu: 'go8',
 			children: [
-				{ name: "state", children: [{ name: "mapState()", menu: 'JavaScript1' }] },
-				{ name: "getter", children: [{ name: "mapGetters()", menu: 'JavaScript1' }] },
-				{ name: "action", children: [{ name: "mapAction()", menu: 'JavaScript1' }] },
-				{ name: "mutation", children: [{ name: "mapMutation", menu: 'JavaScript1' }] }
+				{ name: "state", menu: 'go/eight/one.md' },
+				{ name: "getter", menu: 'go/eight/two.md'},
+				{ name: "action", menu: 'go/eight/three.md' },
+				{ name: "mutation", menu: 'go/eight/four.md' }
 			]
 		}
 	]
 };
 
 const Webpack = {
-	name: "Webpack",
 	children: [
 		{
 			name: "Entry",
+			menu: 'webpack1',
 			children: [
-				{ name: "单入口", value: 4116 },
-				{ name: "多入口", value: 4116 }
+				{ name: "单入口", menu: 'webpack/entry/one.md' },
+				{ name: "多入口", menu: 'webpack/entry/two.md' }
 			]
 		},
 		{
 			name: "Output",
+			menu: 'webpack2',
 			children: [
 				{ name: "Component", value: 4116 },
 				{
@@ -423,6 +520,7 @@ const Webpack = {
 		},
 		{
 			name: "Loaders",
+			menu: 'webpack3',
 			children: [
 				{ name: "数据劫持+观察者模式", value: 4116 },
 				{ name: "数据劫持+观察者模式", value: 4116 },
@@ -432,62 +530,45 @@ const Webpack = {
 		},
 		{
 			name: "Plugins",
+			menu: 'webpack4',
 			children: [{ name: "IScaleMap", value: 2105 }]
 		},
 		{
 			name: "hot-server",
+			menu: 'webpack5',
 			children: [{ name: "DirtySprite", menu: 'JavaScript1' }]
 		},
 		{
 			name: "打包优化",
+			menu: 'webpack6',
 			children: [{ name: "DirtySprite", menu: 'JavaScript1' }]
 		},
 		{
-			name: "源码",
+			name: "手写",
+			menu: 'webpack7',
 			children: [
 				{ name: "state", children: [{ name: "mapState()", menu: 'JavaScript1' }] },
 				{ name: "getter", children: [{ name: "mapGetters()", menu: 'JavaScript1' }] },
 				{ name: "action", children: [{ name: "mapAction()", menu: 'JavaScript1' }] },
 				{ name: "mutation", children: [{ name: "mapMutation", menu: 'JavaScript1' }] }
 			]
-		},
-		{
-			name: "DomDiff",
-			children: [
-				{ name: "useState()", menu: 'JavaScript1' },
-				{ name: "useEffect()", menu: 'JavaScript1' }
-			]
-		},
-		{
-			name: "Router",
-			children: [
-				{ name: "history模式", menu: 'JavaScript1' },
-				{ name: "hash模式", menu: 'JavaScript1' }
-			]
-		},
-		{
-			name: "Redux",
-			children: [
-				{ name: "react-redux", menu: 'JavaScript1' },
-				{ name: "redux-thunk", menu: 'JavaScript1' },
-				{ name: "redux-saga", menu: 'JavaScript1' }
-			]
 		}
 	]
 };
 
 const SQL = {
-	name: "SQL",
 	children: [
 		{
 			name: "MySQL",
+			menu: 'SQL1',
 			children: [
-				{ name: "单入口", value: 4116 },
-				{ name: "多入口", value: 4116 }
+				{ name: "单入口", menu: 'Sql/mySQL/one.md' },
+				{ name: "多入口", menu: 'Sql/mySQL/two.md' }
 			]
 		},
 		{
 			name: "MongoDB",
+			menu: 'SQL2',
 			children: [
 				{ name: "Component", value: 4116 },
 				{
@@ -504,6 +585,7 @@ const SQL = {
 		},
 		{
 			name: "Redis",
+			menu: 'SQL3',
 			children: [
 				{ name: "数据劫持+观察者模式", value: 4116 },
 				{ name: "数据劫持+观察者模式", value: 4116 },
@@ -515,11 +597,13 @@ const SQL = {
 };
 export const treeData = {
 	JavaScript,
+	CSS,
 	Node,
+	Data,
 	TypeScript,
 	React,
 	Vue,
-	Golang,
+	GoLang,
 	Webpack,
 	SQL
 };

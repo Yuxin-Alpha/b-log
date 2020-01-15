@@ -13,17 +13,38 @@ class Entry extends React.Component {
 	constructor(props) {
 		super(props)
 		this.state = {
-			content: ''
+			content: introMD,
+			leftMenu: treeData['JavaScript'],
+			openKeys: [treeData['JavaScript'].children[0].menu],
+			defaultChecked: [treeData['JavaScript'].children[0].children[0].menu]
 		}
-	}
-	componentDidMount() {
-		this.setState({content: introMD})
 	}
 	handleChangeMark = (item) => {
 		import(`./${item.key}`).then(res => {
-			console.log(res.default);
-			this.setState({content: res.default})
+			this.setState({
+				content: res.default,
+				defaultChecked: item.key
+			})
 		})	
+	}
+	changeHeaderMenu(text) {
+		this.setState({
+			leftMenu: treeData[text],
+			openKeys: [treeData[text].children[0].menu],
+			defaultChecked: [treeData[text].children[0].children[0].menu]
+		})
+	}
+	onOpenChange = openKeys => {
+		const latestOpenKey = openKeys.find(key => this.state.openKeys.indexOf(key) === -1);
+		if (this.state.leftMenu.children.map(item => {
+			return item.menu
+		}).indexOf(latestOpenKey) === -1) {
+			this.setState({ openKeys });
+		} else {
+			this.setState({
+				openKeys: latestOpenKey ? [latestOpenKey] : [],
+			});
+		}
 	}
 	render() {
 		return (
@@ -38,7 +59,9 @@ class Entry extends React.Component {
 						style={{ lineHeight: '64px' }}
 					>
 						{ navData.map(item => {
-							return <Menu.Item key={item.text}>{item.text}</Menu.Item>
+							return <Menu.Item key={item.text} onClick={() => {
+								this.changeHeaderMenu(item.text)
+							}}>{item.text}</Menu.Item>
 						}) }
 					</Menu>
     		</Header>
@@ -46,11 +69,13 @@ class Entry extends React.Component {
 				<Sider width={300} style={{ background: '#fff', overflowX: 'hidden', overflowY:'auto' }}>
 					<Menu
 						mode="inline"
-						defaultSelectedKeys={['javascript/array/intro.md']}
-						defaultOpenKeys={['JavaScript1']}
+						defaultSelectedKeys={ this.state.defaultChecked }
+						selectedKeys={this.state.defaultChecked}
+						openKeys={this.state.openKeys}
+        		onOpenChange={this.onOpenChange}
 						style={{ height: '100%', borderRight: 0 }}
 					>
-						{ treeData['JavaScript'].children.map(item => {
+						{ this.state.leftMenu.children.map(item => {
 							return (<SubMenu
 								key={item.menu}
 								title={
