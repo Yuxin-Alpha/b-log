@@ -11,7 +11,7 @@
 */
 function isType(type) {
   return function(params) {
-    return Object.toString.call(params).slice(8, -1) === type
+    return Object.prototype.toString.call(params).slice(8, -1) === type
   }
 }
 /**

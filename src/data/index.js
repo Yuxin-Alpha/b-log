@@ -64,34 +64,24 @@ const JavaScript = {
 			menu: 'JavaScript3',
 			children: [
 				{ name: "this", menu: 'javascript/function/this.md' },
-				{ name: "apply()&call()", menu: 'JavaScript32' },
-				{ name: "bind()", menu: 'JavaScript33' },
-				{
-					name: "闭包&高阶函数",
-					menu: 'JavaScript34',
-					children: [{ name: "函数柯里化", menu: 'JavaScript341'}]
-				},
-				{ name: "generator", menu: 'JavaScript36' }
+				{ name: "apply()&call()", menu: 'javascript/function/apply.md' },
+				{ name: "bind()", menu: 'javascript/function/bind.md' },
+				{ name: "闭包&高阶函数", menu: 'javascript/function/high_func.md' },
+				{ name: "generator", menu: 'javascript/function/generator.md' }
 			]
 		},
 		{
 			name: "Object",
 			menu: 'JavaScript4',
 			children: [
-				{ name: "对象特性", menu: 'JavaScript41', },
-				{ name: "new()", menu: 'JavaScript411' },
-				{ name: "原型&原型链", menu: 'JavaScript35'},
-				{ name: "Proxy", menu: 'JavaScript412' },
-				{ name: "Reflect", menu: 'JavaScript413' },
-				{
-					name: "Class",
-					menu: 'JavaScript42',
-					children: [
-						{ name: "静态属性", menu: 'JavaScript422' },
-						{ name: "继承", menu: 'JavaScript423' },
-					]
-				},
-				{ name: "装饰器", menu: 'JavaScript424' }
+				{ name: "对象特性", menu: 'javascript/object/attr.md' },
+				{ name: "拷贝", menu: 'javascript/object/copy.md' },
+				{ name: "new()", menu: 'javascript/object/new.md' },
+				{ name: "原型&原型链", menu: 'javascript/object/prototype.md'},
+				{ name: "Proxy", menu: 'javascript/object/proxy.md' },
+				{ name: "Reflect", menu: 'javascript/object/reflect.md' },
+				{ name: "Class", menu: 'javascript/object/class.md' },
+				{ name: "装饰器", menu: 'javascript/object/subci.md' }
 			]
 		},
 		{
@@ -101,20 +91,9 @@ const JavaScript = {
 				{ name: "介绍", menu: 'javascript/async/open.md' },
 				{ name: "发布订阅", menu: 'javascript/async/emit.md' },
 				{ name: "观察者", menu: 'javascript/async/observe.md' },
-				{
-					name: "Promise",
-					menu: 'javascript/async/promise.md',
-					children: [
-						{ name: "then()&catch()", menu: 'JavaScript531' },
-						{ name: "all()", menu: 'JavaScript532' },
-						{ name: "race()", menu: 'JavaScript533' }
-					]
-				},
-				{
-					name: "generator+co",
-					menu: 'javascript/async/generator.md'
-				},
-				{ name: "async&await", menu: 'JavaScript54' }
+				{ name: "Promise", menu: 'javascript/async/promise.md' },
+				{ name: "generator+co", menu: 'javascript/async/generator.md' },
+				{ name: "async&await", menu: 'javascript/async/async.md' }
 			]
 		}
 	]
