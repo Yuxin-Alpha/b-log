@@ -25,6 +25,7 @@ class Entry extends React.Component {
 				content: res.default,
 				defaultChecked: item.key
 			})
+			document.getElementsByClassName('ant-layout')[2].scrollTop = 0
 		})	
 	}
 	changeHeaderMenu(text) {
@@ -32,6 +33,8 @@ class Entry extends React.Component {
 			leftMenu: treeData[text],
 			openKeys: [treeData[text].children[0].menu],
 			defaultChecked: [treeData[text].children[0].children[0].menu]
+		}, () => {
+			document.getElementsByClassName('ant-layout')[2].scrollTop = 0
 		})
 	}
 	onOpenChange = openKeys => {

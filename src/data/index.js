@@ -39,8 +39,8 @@ const JavaScript = {
 					menu: 'javascript/array/ES5.md'
 				},
 				{
-					name: "ES6",
-					menu: 'javascript/array/ES6.md'
+					name: "使用拓展",
+					menu: 'javascript/array/use.md'
 				}
 			]
 		},
