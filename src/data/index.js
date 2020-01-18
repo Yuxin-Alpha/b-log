@@ -174,6 +174,12 @@ const Node = {
 			{ name: "基础概念", menu: 'node/base/base.md' }]
 		},
 		{
+			name: "常用模块",
+			menu: 'node1.1',
+			children: [{ name: "path", menu: 'node/use/path.md' }, 
+			{ name: "module", menu: 'node/use/module.md' }]
+		},
+		{
 			name: "buffer",
 			menu: 'node1',
 			children: [{ name: "FlareVis", menu: 'node/buffer/one.md' }, { name: "FlareVis", menu: 'node/buffer/two.md' }]

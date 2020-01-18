@@ -52,7 +52,7 @@ console.log(process.cwd())
 
 ### nextTick
 
-微任务
+微任务，只能在node中使用。
 
 ```javascript
 
