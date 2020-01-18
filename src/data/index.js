@@ -25,6 +25,16 @@ export const navData = [
 ]
 
 const JavaScript = {
+	time: [
+		{ id: 8, text: '', date: '', color: '', icon: '' },
+		{ id: 7, text: '', date: '', color: '', icon: '' },
+		{ id: 6, text: '', date: '', color: '', icon: '' },
+		{ id: 5, text: '', date: '', color: '', icon: '' },
+		{ id: 4, text: '', date: '', color: '', icon: '' },
+		{ id: 3, text: '', date: '2019-12-11', color: 'yellow', icon: '' },
+		{ id: 2, text: '添加array文档', date: '2019-12-09', color: 'green', icon: '' },
+		{ id: 1, text: '博客生成', date: '2019-12-08', color: 'green', icon: '' },
+	],
 	children: [
 		{
 			name: "Type",
@@ -155,6 +165,14 @@ const CSS = {
 };
 const Node = {
 	children: [
+		{
+			name: "基础概念",
+			menu: 'node0',
+			children: [{ name: "进程与线程", menu: 'node/base/progress.md' }, 
+			{ name: "同异步&阻塞", menu: 'node/base/async.md' },
+			{ name: "事件环", menu: 'node/base/loop.md' },
+			{ name: "基础概念", menu: 'node/base/base.md' }]
+		},
 		{
 			name: "buffer",
 			menu: 'node1',

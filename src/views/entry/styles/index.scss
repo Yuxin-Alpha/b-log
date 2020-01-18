@@ -3,4 +3,32 @@
 	.ant-layout {
 		height: 100%;
 	}
+	&--timeline{
+		max-height: 40%;
+		overflow: hidden;
+		margin-bottom: 30px;
+		border-bottom: 1px solid #eee;
+		&_container{
+			max-height: 200px;
+			overflow: auto;
+		}
+	}
+	&--issue{
+		max-height: 50%;
+		overflow: auto;
+		&_item{
+			height: 100px;
+			width: 100%;
+			background-color: #dedede;
+			border-radius: 5px;
+			display: flex;
+		}
+		&_left {
+			flex: 1;
+			padding: 20px;
+		}
+		&_right {
+			width: 100px;
+		}
+	}
 }

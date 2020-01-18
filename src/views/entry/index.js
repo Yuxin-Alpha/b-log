@@ -3,6 +3,8 @@ import { Layout, Menu, Icon } from 'antd';
 import { navData, treeData } from '../../data/index'
 import introMD from './javascript/array/intro.md'
 import ReactMarkdown from 'react-markdown'
+import ScrollItem from './components/ScrollItem'
+import TimeItem from './components/TimeItem'
 import CodeBlock from '../../utils/CodeBlock'
 import './styles/index.scss'
 
@@ -14,6 +16,7 @@ class Entry extends React.Component {
 		super(props)
 		this.state = {
 			content: introMD,
+			activeTimes: treeData['JavaScript'].time,
 			leftMenu: treeData['JavaScript'],
 			openKeys: [treeData['JavaScript'].children[0].menu],
 			defaultChecked: [treeData['JavaScript'].children[0].children[0].menu]
@@ -69,7 +72,7 @@ class Entry extends React.Component {
 					</Menu>
     		</Header>
 			<Layout >
-				<Sider width={300} style={{ background: '#fff', overflowX: 'hidden', overflowY:'auto' }}>
+				<Sider width={200} style={{ background: '#fff', overflowX: 'hidden', overflowY:'auto' }}>
 					<Menu
 						mode="inline"
 						defaultSelectedKeys={ this.state.defaultChecked }
@@ -95,7 +98,7 @@ class Entry extends React.Component {
 						})}
 					</Menu>
 				</Sider>
-				<Layout style={{ borderLeft: '1px solid #eee' }}>
+				<Layout style={{ borderLeft: '1px solid #eee', width: '60%' }}>
 					<Content
 						style={{
 							padding: 24,
@@ -106,7 +109,30 @@ class Entry extends React.Component {
 						<ReactMarkdown source={this.state.content} escapeHtml={false} renderers={{code: CodeBlock}}></ReactMarkdown>
 					</Content>
 				</Layout>
+				<Layout style={{ borderLeft: '1px solid #eee', width: '500px' }}>
+					<Content
+						style={{
+							padding: 24,
+							margin: 0,
+							minHeight: 280,
+						}}
+					>
+						<div className="entry--timeline">
+							<h3>时间线</h3>
+							<div className="entry--timeline_container">
+								<TimeItem activeTimes={this.state.activeTimes}></TimeItem>
+							</div>
+						</div>
+						<div className="entry--issue">
+							<h3>issue更新</h3>
+							<div className="entry--issue_container">
+								<ScrollItem></ScrollItem>
+							</div>
+						</div>
+					</Content>
 				</Layout>
+				</Layout>
+				
   		</Layout>
 		</div>
 		);

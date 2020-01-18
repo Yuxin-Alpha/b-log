@@ -1,2 +1,2 @@
-function add() {};
-console.log(typeof add);
+
+console.log(process.argv);
