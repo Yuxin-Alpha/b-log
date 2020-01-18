@@ -27,6 +27,24 @@ export const navData = [
 const JavaScript = {
 	children: [
 		{
+			name: "Type",
+			menu: 'JavaScript0',
+			children: [
+				{
+					name: "介绍",
+					menu: 'javascript/type/intro.md'
+				},
+				{
+					name: "类型判断",
+					menu: 'javascript/type/judge.md'
+				},
+				{
+					name: "强制类型转化",
+					menu: 'javascript/type/transfer.md'
+				}
+			]
+		},
+		{
 			name: "Array",
 			menu: 'JavaScript1',
 			children: [
@@ -295,7 +313,10 @@ const React = {
 			name: "Hooks",
 			menu: "react7",
 			children: [
+				{ name: "介绍", menu: 'react/hooks/intro.md' },
 				{ name: "useState()", menu: 'react/hooks/state.md' },
+				{ name: "useContext()", menu: 'react/hooks/context.md' },
+				{ name: "useReducer()", menu: 'react/hooks/reducer.md' },
 				{ name: "useEffect()", menu: 'react/hooks/effect.md' }
 			]
 		},

@@ -22,6 +22,7 @@ Array.prototype.myMap = function(fn) {
 ```
 
 + reduce
+
 reduce应该算是数组中最复杂的API，我们先来看看使用方法。
 ```javascript
 
