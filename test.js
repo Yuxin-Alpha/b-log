@@ -1,15 +1,25 @@
-let arrProto = Array.prototype
-const proto = Object.create(arrProto)
-const methodsList = ['push', 'pop', 'shift', 'unshift', 'splice', 'reverse', 'sort']
 function update() {
-	console.log('视图更新');
+	console.log('模拟视图的更新');
 }
-methodsList.forEach(item => {
-	proto[item] = function() {
-		update();
-		arrProto[item].call(this, ...arguments)
+
+const obj = {
+	name: 'Jack',
+	age: 9
+}
+ 
+const handler = {
+	get(target, key) {
+		if(typeof target[key] === 'object' && target[key] !== null) {
+			return new Proxy(target[key], handler)
+		}
+		return Reflect.get(target, key)
+	},
+	set(target, key, value) {
+		update()
+		return Reflect.set(target, key, value)
 	}
-})
-let list  = [1, 2, 3]
-list.__proto__ = proto
-list.push(5)
+}
+
+const proxy = new Proxy(obj, handler)
+
+proxy.name = "Jason"

@@ -379,6 +379,14 @@ const Vue = {
 	name: "Vue",
 	children: [
 		{
+			name: "响应式原理",
+			menu: 'Vue3',
+			children: [{ name: "数据劫持", menu: 'vue/design/define.md' },
+			{ name: "数组拓展", menu: 'vue/design/array.md' },
+			{ name: "Proxy拓展", menu: 'vue/design/proxy.md' }
+		]
+		},
+		{
 			name: "指令",
 			menu: 'Vue1',
 			children: [
@@ -393,14 +401,6 @@ const Vue = {
 				{ name: "介绍", menu: 'vue/component/intro.md' },
 				{ name: "LifeCycle", menu: 'vue/component/lifecycle.md' }
 			]
-		},
-		{
-			name: "MVVM",
-			menu: 'Vue3',
-			children: [{ name: "数据劫持", menu: 'vue/design/define.md' },
-			{ name: "数组拓展", menu: 'vue/design/array.md' },
-			{ name: "Proxy拓展", menu: 'vue/design/proxy.md' }
-		]
 		},
 		{
 			name: "事件处理",
