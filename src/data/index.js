@@ -218,6 +218,7 @@ const Data = {
 			name: "线性表",
 			menu: 'data1',
 			children: [
+				{ name: "介绍", menu: 'struc/base/intro.md' },
 				{ name: "栈", menu: 'data/linear/stack.md' },
 				{ name: "队列", menu: 'data/linear/queue.md' },
 				{ name: "链表", menu: 'data/linear/link.md' },
@@ -398,7 +399,7 @@ const Vue = {
 			menu: 'Vue3',
 			children: [{ name: "数据劫持", menu: 'vue/design/define.md' },
 			{ name: "数组拓展", menu: 'vue/design/array.md' },
-			{ name: "Proxy拓展", menu: 'vue/design/define.md' }
+			{ name: "Proxy拓展", menu: 'vue/design/proxy.md' }
 		]
 		},
 		{

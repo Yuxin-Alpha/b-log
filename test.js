@@ -1,39 +1,15 @@
-const obj = {
-	name: 'Jack',
-	position: {
-		address: 'some area',
-		date: '2012.08.30'
-	}
-}
-
+let arrProto = Array.prototype
+const proto = Object.create(arrProto)
+const methodsList = ['push', 'pop', 'shift', 'unshift', 'splice', 'reverse', 'sort']
 function update() {
-	console.log('视图更新') 
+	console.log('视图更新');
 }
-
-function observe(target) {
-	if(typeof target !== 'object' || target === null) {
-		return
+methodsList.forEach(item => {
+	proto[item] = function() {
+		update();
+		arrProto[item].call(this, ...arguments)
 	}
-	for(let key in target) {
-		reactTiveUpdate(target, key, target[key])
-	}
-}
-
-function reactTiveUpdate(target, key, value) {
-	observe(target[key])
-	Object.defineProperty(target, key, {
-		get() {
-			return value
-		},
-		set(newValue) {
-			if(value === newValue) {
-				return
-			}
-			update()
-			value = newValue
-		}
-	})
-}
-observe(obj)
-obj.position.date = '2019.09.10'
-console.log(obj.position.date);
+})
+let list  = [1, 2, 3]
+list.__proto__ = proto
+list.push(5)
