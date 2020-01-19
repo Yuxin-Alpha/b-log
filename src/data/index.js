@@ -381,11 +381,7 @@ const Vue = {
 			name: "指令",
 			menu: 'Vue1',
 			children: [
-				{ name: "v-bind", menu: 'vue/directive/v_bind.md' },
-				{ name: "v-if&v-show", menu: 'vue/directive/v_if.md'  },
-				{ name: "v-model", menu: 'vue/directive/v_model.md'  },
-				{ name: "v-html", menu: 'vue/directive/v_html.md'  },
-				{ name: "v-for", menu: 'vue/directive/v_for.md'  },
+				{ name: "官方指令", menu: 'vue/directive/intro.md' },
 				{ name: "自定义指令", menu: 'vue/directive/v_directive.md', children: [{ name: "LifeCycle", value: 4116 }] }
 			]
 		},
@@ -400,7 +396,10 @@ const Vue = {
 		{
 			name: "MVVM",
 			menu: 'Vue3',
-			children: [{ name: "数据劫持+观察者模式", menu: 'vue/design/mvvm.md' }]
+			children: [{ name: "数据劫持", menu: 'vue/design/define.md' },
+			{ name: "数组拓展", menu: 'vue/design/array.md' },
+			{ name: "Proxy拓展", menu: 'vue/design/define.md' }
+		]
 		},
 		{
 			name: "事件处理",
