@@ -1,25 +1,34 @@
-function update() {
-	console.log('模拟视图的更新');
+function mergeSort(arr) {
+	sortProcess(arr, 0, arr.length-1)
 }
-
-const obj = {
-	name: 'Jack',
-	age: 9
+// 递归排列
+function sortProcess(arr, left, right) {
+	if(left === right) return
+	let mid = left + ((right-left) >> 1)
+	return sortProcess(arr, left, mid) + sortProcess(arr, mid+1, right) + merge(arr, left, mid, right)
 }
- 
-const handler = {
-	get(target, key) {
-		if(typeof target[key] === 'object' && target[key] !== null) {
-			return new Proxy(target[key], handler)
-		}
-		return Reflect.get(target, key)
-	},
-	set(target, key, value) {
-		update()
-		return Reflect.set(target, key, value)
+// 外排merge
+function merge(arr, left, mid, right) {
+	let helpArr = []
+	let currentIndex = 0
+	let leftPointer = left
+	let rightPointer = mid + 1
+	let res = 0
+	while(leftPointer <= mid && rightPointer <= right) {
+		res += arr[leftPointer] < arr[rightPointer] ? (right - rightPointer + 1) * arr[leftPointer] : 0
+		helpArr[currentIndex++] = arr[leftPointer] < arr[rightPointer] ? arr[leftPointer++] : arr[rightPointer++]
 	}
+	while(leftPointer <= mid) {
+		helpArr[currentIndex++] = arr[leftPointer++]
+	}
+	while(rightPointer <= right) {
+		helpArr[currentIndex++] = arr[rightPointer++]
+	}
+	for(let i = 0;i< helpArr.length;i++) {
+		arr[left + i] = helpArr[i]
+	}
+	return res
 }
-
-const proxy = new Proxy(obj, handler)
-
-proxy.name = "Jason"
+const arr = [9,4,3,5,8,7,1,6]
+mergeSort(arr)
+console.log(arr);

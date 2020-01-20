@@ -219,8 +219,8 @@ const Data = {
 			name: "基础",
 			menu: 'data0',
 			children: [
-				{ name: "介绍", menu: 'struc/base/intro.md' },
-				{ name: "递归", menu: 'struc/base/loop.md' },
+				{ name: "介绍", menu: 'struct/base/intro.md' },
+				{ name: "递归", menu: 'struct/base/loop.md' },
 			]
 		},
 		{
@@ -250,7 +250,11 @@ const Data = {
 		{
 			name: "排序",
 			menu: 'data5',
-			children: [{ name: "DirtySprite", menu: 'JavaScript2' }]
+			children: [{ name: "冒泡排序", menu: 'struct/sort/bubble.md' },
+			{ name: "选择排序", menu: 'struct/sort/select.md' },
+			{ name: "插入排序", menu: 'struct/sort/insert.md' },
+			{ name: "归并排序", menu: 'struct/sort/merge.md' }
+		]
 		},
 		{
 			name: "查找",
@@ -399,8 +403,7 @@ const Vue = {
 			name: "组件",
 			menu: 'Vue2',
 			children: [
-				{ name: "介绍", menu: 'vue/component/intro.md' },
-				{ name: "LifeCycle", menu: 'vue/component/lifecycle.md' }
+				{ name: "LifeCycle", menu: 'vue/component/life.md' }
 			]
 		},
 		{
