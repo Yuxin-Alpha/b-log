@@ -403,7 +403,8 @@ const Vue = {
 			name: "组件",
 			menu: 'Vue2',
 			children: [
-				{ name: "LifeCycle", menu: 'vue/component/life.md' }
+				{ name: "LifeCycle", menu: 'vue/component/life.md' },
+				{ name: "通信", menu: 'vue/component/emit.md' }
 			]
 		},
 		{
