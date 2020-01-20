@@ -32,10 +32,14 @@ class Entry extends React.Component {
 		})	
 	}
 	changeHeaderMenu(text) {
-		this.setState({
-			leftMenu: treeData[text],
-			openKeys: [treeData[text].children[0].menu],
-			defaultChecked: [treeData[text].children[0].children[0].menu]
+		console.log(`./${treeData[text].children[0].children[0].menu}`);
+		import(`./${treeData[text].children[0].children[0].menu}`).then(res => {
+			this.setState({
+				content: res.default,
+				leftMenu: treeData[text],
+				openKeys: [treeData[text].children[0].menu],
+				defaultChecked: [treeData[text].children[0].children[0].menu]
+			})
 		}, () => {
 			document.getElementsByClassName('ant-layout')[2].scrollTop = 0
 		})

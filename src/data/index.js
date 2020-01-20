@@ -14,6 +14,7 @@ export const bubbleData = [
 export const navData = [
 	{id: 1, text: 'JavaScript'},
 	{id: 2, text: 'CSS'},
+	{id: 2.1, text: 'TypeScript'},
 	{id: 3, text: 'Vue'},
 	{id: 4, text: 'React'},
 	{id: 5, text: 'Data'},
@@ -215,10 +216,17 @@ const Node = {
 const Data = {
 	children: [
 		{
+			name: "基础",
+			menu: 'data0',
+			children: [
+				{ name: "介绍", menu: 'struc/base/intro.md' },
+				{ name: "递归", menu: 'struc/base/loop.md' },
+			]
+		},
+		{
 			name: "线性表",
 			menu: 'data1',
 			children: [
-				{ name: "介绍", menu: 'struc/base/intro.md' },
 				{ name: "栈", menu: 'data/linear/stack.md' },
 				{ name: "队列", menu: 'data/linear/queue.md' },
 				{ name: "链表", menu: 'data/linear/link.md' },
@@ -262,19 +270,12 @@ const TypeScript = {
 			name: "类型",
 			menu: "TS1",
 			children: [
-				{ name: "类型检查", menu: 'typescript/type/check.md' },
-				{ name: "类型推论", menu: 'typescript/type/infer.md' }
+				{ name: "基本类型", menu: 'typescript/type/intro.md' },
+				{ name: "函数", menu: 'typescript/type/function.md' },
+				{ name: "接口", menu: 'typescript/type/interface.md' },
+				{ name: "类", menu: 'typescript/type/class.md' },
+				{ name: "泛型", menu: 'typescript/type/generic.md' }
 			]
-		},
-		{
-			name: "接口",
-			menu: "TS2",
-			children: [{ name: "介绍", menu: 'typescript/interface/intro.md' }]
-		},
-		{
-			name: "泛型",
-			menu: "TS3",
-			children: [{ name: "介绍", menu: 'typescript/generic/intro.md' }]
 		},
 		{
 			name: "Class",
