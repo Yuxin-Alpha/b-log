@@ -253,7 +253,9 @@ const Data = {
 			children: [{ name: "冒泡排序", menu: 'struct/sort/bubble.md' },
 			{ name: "选择排序", menu: 'struct/sort/select.md' },
 			{ name: "插入排序", menu: 'struct/sort/insert.md' },
-			{ name: "归并排序", menu: 'struct/sort/merge.md' }
+			{ name: "归并排序", menu: 'struct/sort/merge.md' },
+			{ name: "快速排序", menu: 'struct/sort/quick.md' },
+			{ name: "堆排序", menu: 'struct/sort/heap.md' }
 		]
 		},
 		{

@@ -97,6 +97,7 @@ function merge(arr, left, mid, right) {
   let rightPointer = mid + 1
   let res = 0
   while(leftPointer <= mid && rightPointer <= right) {
+		// 小和相加
     res += arr[leftPointer] < arr[rightPointer] ? (right - rightPointer + 1) * arr[leftPointer] : 0
     helpArr[currentIndex++] = arr[leftPointer] < arr[rightPointer] ? arr[leftPointer++] : arr[rightPointer++]
   }
