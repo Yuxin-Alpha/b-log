@@ -217,7 +217,7 @@ const Data = {
 	children: [
 		{
 			name: "基础",
-			menu: 'data0',
+			menu: 'base',
 			children: [
 				{ name: "介绍", menu: 'struct/base/intro.md' },
 				{ name: "递归", menu: 'struct/base/loop.md' },
@@ -225,31 +225,31 @@ const Data = {
 		},
 		{
 			name: "线性表",
-			menu: 'data1',
+			menu: 'linear',
 			children: [
-				{ name: "栈", menu: 'data/linear/stack.md' },
-				{ name: "队列", menu: 'data/linear/queue.md' },
-				{ name: "链表", menu: 'data/linear/link.md' },
+				{ name: "栈", menu: 'struct/linear/stack.md' },
+				{ name: "队列", menu: 'struct/linear/queue.md' },
+				{ name: "链表", menu: 'struct/linear/link.md' },
 			]
 		},
 		{
 			name: "树",
-			menu: 'data2',
-			children: [{ name: "FlareVis", value: 4116 }]
+			menu: 'tree',
+			children: [{ name: "FlareVis", menu: 'struct/sort/bubble.md' }]
 		},
 		{
 			name: "堆",
-			menu: 'data3',
-			children: [{ name: "IScaleMap", value: 2105 }]
+			menu: 'heap',
+			children: [{ name: "IScaleMap", menu: 'struct/sort/bubble.md'}]
 		},
 		{
 			name: "位运算",
-			menu: 'data4',
-			children: [{ name: "DirtySprite", menu: 'JavaScript1' }]
+			menu: 'byte',
+			children: [{ name: "DirtySprite", menu: 'struct/sort/bubble.md' }]
 		},
 		{
 			name: "排序",
-			menu: 'data5',
+			menu: 'sort',
 			children: [{ name: "冒泡排序", menu: 'struct/sort/bubble.md' },
 			{ name: "选择排序", menu: 'struct/sort/select.md' },
 			{ name: "插入排序", menu: 'struct/sort/insert.md' },
@@ -260,12 +260,12 @@ const Data = {
 		},
 		{
 			name: "查找",
-			menu: 'data6',
+			menu: 'search',
 			children: [{ name: "DirtySprite", menu: 'JavaScript4' }]
 		},
 		{
 			name: "动态规划",
-			menu: 'data7',
+			menu: 'dynamic',
 			children: [{ name: "DirtySprite", menu: 'JavaScript5' }]
 		}
 	]
