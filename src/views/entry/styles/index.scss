@@ -4,22 +4,28 @@
 		height: 100%;
 	}
 	&--timeline{
-		max-height: 40%;
+		height: 55%;
 		overflow: hidden;
 		margin-bottom: 30px;
-		border-bottom: 1px solid #eee;
+		border-bottom: 1px solid #aaa;
 		&_container{
-			max-height: 200px;
+			max-height: 400px;
+			padding-top: 20px;
 			overflow: auto;
 		}
 	}
 	&--issue{
-		max-height: 50%;
-		overflow: auto;
+		height: 40%;
+		overflow: hidden;
+		&_container {
+			max-height: 90%;
+			overflow: hidden;
+		}
 		&_item{
 			height: 100px;
 			width: 100%;
 			background-color: #dedede;
+			margin-bottom: 15px;
 			border-radius: 5px;
 			display: flex;
 		}

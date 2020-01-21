@@ -27,12 +27,18 @@ export const navData = [
 
 const JavaScript = {
 	time: [
-		{ id: 8, text: '', date: '', color: '', icon: '' },
-		{ id: 7, text: '', date: '', color: '', icon: '' },
-		{ id: 6, text: '', date: '', color: '', icon: '' },
-		{ id: 5, text: '', date: '', color: '', icon: '' },
-		{ id: 4, text: '', date: '', color: '', icon: '' },
-		{ id: 3, text: '', date: '2019-12-11', color: 'yellow', icon: '' },
+		{ id: 14, text: '完成异步解决方案', date: '2019-12-27', color: 'green', icon: '' },
+		{ id: 13, text: '手写reduce', date: '2019-12-26', color: 'red', icon: '' },
+		{ id: 12, text: 'new添加', date: '2019-12-24', color: 'red', icon: '' },
+		{ id: 11, text: 'Reflect添加', date: '2019-12-23', color: 'green', icon: '' },
+		{ id: 10, text: 'Proxy添加', date: '2019-12-20', color: 'green', icon: '' },
+		{ id: 9, text: 'type添加', date: '2019-12-19', color: 'yellow', icon: '' },
+		{ id: 8, text: '完善this', date: '2019-12-18', color: 'green', icon: '' },
+		{ id: 7, text: '手写深拷贝', date: '2019-12-16', color: 'yellow', icon: '' },
+		{ id: 6, text: '添加this解析', date: '2019-12-15', color: 'red', icon: '' },
+		{ id: 5, text: '对象特性添加', date: '2019-12-14', color: 'yellow', icon: '' },
+		{ id: 4, text: '手写call', date: '2019-12-12', color: 'green', icon: '' },
+		{ id: 3, text: '手写promise', date: '2019-12-11', color: 'yellow', icon: '' },
 		{ id: 2, text: '添加array文档', date: '2019-12-09', color: 'green', icon: '' },
 		{ id: 1, text: '博客生成', date: '2019-12-08', color: 'green', icon: '' },
 	],
@@ -165,6 +171,22 @@ const CSS = {
 	]
 };
 const Node = {
+	time: [
+		{ id: 14, text: '完成异步解决方案', date: '2019-12-27', color: 'green', icon: '' },
+		{ id: 13, text: '手写reduce', date: '2019-12-26', color: 'red', icon: '' },
+		{ id: 12, text: 'new添加', date: '2019-12-24', color: 'red', icon: '' },
+		{ id: 11, text: 'Reflect添加', date: '2019-12-23', color: 'green', icon: '' },
+		{ id: 10, text: 'Proxy添加', date: '2019-12-20', color: 'green', icon: '' },
+		{ id: 9, text: 'type添加', date: '2019-12-19', color: 'yellow', icon: '' },
+		{ id: 8, text: '完善this', date: '2019-12-18', color: 'green', icon: '' },
+		{ id: 7, text: '手写深拷贝', date: '2019-12-16', color: 'yellow', icon: '' },
+		{ id: 6, text: '添加this解析', date: '2019-12-15', color: 'red', icon: '' },
+		{ id: 5, text: '对象特性添加', date: '2019-12-14', color: 'yellow', icon: '' },
+		{ id: 4, text: '手写call', date: '2019-12-12', color: 'green', icon: '' },
+		{ id: 3, text: '手写promise', date: '2019-12-11', color: 'yellow', icon: '' },
+		{ id: 2, text: '添加array文档', date: '2019-12-09', color: 'green', icon: '' },
+		{ id: 1, text: '博客生成', date: '2019-12-08', color: 'green', icon: '' },
+	],
 	children: [
 		{
 			name: "基础概念",
@@ -214,6 +236,22 @@ const Node = {
 };
 
 const Data = {
+	time: [
+		{ id: 14, text: '完成异步解决方案', date: '2019-12-27', color: 'green', icon: '' },
+		{ id: 13, text: '手写reduce', date: '2019-12-26', color: 'red', icon: '' },
+		{ id: 12, text: 'new添加', date: '2019-12-24', color: 'red', icon: '' },
+		{ id: 11, text: 'Reflect添加', date: '2019-12-23', color: 'green', icon: '' },
+		{ id: 10, text: 'Proxy添加', date: '2019-12-20', color: 'green', icon: '' },
+		{ id: 9, text: 'type添加', date: '2019-12-19', color: 'yellow', icon: '' },
+		{ id: 8, text: '完善this', date: '2019-12-18', color: 'green', icon: '' },
+		{ id: 7, text: '手写深拷贝', date: '2019-12-16', color: 'yellow', icon: '' },
+		{ id: 6, text: '添加this解析', date: '2019-12-15', color: 'red', icon: '' },
+		{ id: 5, text: '对象特性添加', date: '2019-12-14', color: 'yellow', icon: '' },
+		{ id: 4, text: '手写call', date: '2019-12-12', color: 'green', icon: '' },
+		{ id: 3, text: '手写promise', date: '2019-12-11', color: 'yellow', icon: '' },
+		{ id: 2, text: '添加递归概念', date: '2019-12-09', color: 'yellow', icon: '' },
+		{ id: 1, text: '添加时间复杂度', date: '2020-12-08', color: 'green', icon: '' },
+	],
 	children: [
 		{
 			name: "基础",
@@ -230,6 +268,7 @@ const Data = {
 				{ name: "栈", menu: 'struct/linear/stack.md' },
 				{ name: "队列", menu: 'struct/linear/queue.md' },
 				{ name: "链表", menu: 'struct/linear/link.md' },
+				{ name: "练习", menu: 'struct/linear/example.md' }
 			]
 		},
 		{
@@ -271,6 +310,22 @@ const Data = {
 	]
 }
 const TypeScript = {
+	time: [
+		{ id: 14, text: '完成异步解决方案', date: '2019-12-27', color: 'green', icon: '' },
+		{ id: 13, text: '手写reduce', date: '2019-12-26', color: 'red', icon: '' },
+		{ id: 12, text: 'new添加', date: '2019-12-24', color: 'red', icon: '' },
+		{ id: 11, text: 'Reflect添加', date: '2019-12-23', color: 'green', icon: '' },
+		{ id: 10, text: 'Proxy添加', date: '2019-12-20', color: 'green', icon: '' },
+		{ id: 9, text: 'type添加', date: '2019-12-19', color: 'yellow', icon: '' },
+		{ id: 8, text: '完善this', date: '2019-12-18', color: 'green', icon: '' },
+		{ id: 7, text: '手写深拷贝', date: '2019-12-16', color: 'yellow', icon: '' },
+		{ id: 6, text: '添加this解析', date: '2019-12-15', color: 'red', icon: '' },
+		{ id: 5, text: '对象特性添加', date: '2019-12-14', color: 'yellow', icon: '' },
+		{ id: 4, text: '手写call', date: '2019-12-12', color: 'green', icon: '' },
+		{ id: 3, text: '手写promise', date: '2019-12-11', color: 'yellow', icon: '' },
+		{ id: 2, text: '添加array文档', date: '2019-12-09', color: 'green', icon: '' },
+		{ id: 1, text: '博客生成', date: '2019-12-08', color: 'green', icon: '' },
+	],
 	children: [
 		{
 			name: "类型",
@@ -301,6 +356,22 @@ const TypeScript = {
 	]
 };
 const React = {
+	time: [
+		{ id: 14, text: '完成异步解决方案', date: '2019-12-27', color: 'green', icon: '' },
+		{ id: 13, text: '手写reduce', date: '2019-12-26', color: 'red', icon: '' },
+		{ id: 12, text: 'new添加', date: '2019-12-24', color: 'red', icon: '' },
+		{ id: 11, text: 'Reflect添加', date: '2019-12-23', color: 'green', icon: '' },
+		{ id: 10, text: 'Proxy添加', date: '2019-12-20', color: 'green', icon: '' },
+		{ id: 9, text: 'type添加', date: '2019-12-19', color: 'yellow', icon: '' },
+		{ id: 8, text: '完善this', date: '2019-12-18', color: 'green', icon: '' },
+		{ id: 7, text: '手写深拷贝', date: '2019-12-16', color: 'yellow', icon: '' },
+		{ id: 6, text: '添加this解析', date: '2019-12-15', color: 'red', icon: '' },
+		{ id: 5, text: '对象特性添加', date: '2019-12-14', color: 'yellow', icon: '' },
+		{ id: 4, text: '手写call', date: '2019-12-12', color: 'green', icon: '' },
+		{ id: 3, text: '手写promise', date: '2019-12-11', color: 'yellow', icon: '' },
+		{ id: 2, text: '添加array文档', date: '2019-12-09', color: 'green', icon: '' },
+		{ id: 1, text: '博客生成', date: '2019-12-08', color: 'green', icon: '' },
+	],
 	children: [
 		{
 			name: "JSX",
@@ -383,7 +454,22 @@ const React = {
 };
 
 const Vue = {
-	name: "Vue",
+	time: [
+		{ id: 14, text: '完成异步解决方案', date: '2019-12-27', color: 'green', icon: '' },
+		{ id: 13, text: '手写reduce', date: '2019-12-26', color: 'red', icon: '' },
+		{ id: 12, text: 'new添加', date: '2019-12-24', color: 'red', icon: '' },
+		{ id: 11, text: 'Reflect添加', date: '2019-12-23', color: 'green', icon: '' },
+		{ id: 10, text: 'Proxy添加', date: '2019-12-20', color: 'green', icon: '' },
+		{ id: 9, text: 'type添加', date: '2019-12-19', color: 'yellow', icon: '' },
+		{ id: 8, text: '完善this', date: '2019-12-18', color: 'green', icon: '' },
+		{ id: 7, text: '手写深拷贝', date: '2019-12-16', color: 'yellow', icon: '' },
+		{ id: 6, text: '添加this解析', date: '2019-12-15', color: 'red', icon: '' },
+		{ id: 5, text: '对象特性添加', date: '2019-12-14', color: 'yellow', icon: '' },
+		{ id: 4, text: '手写call', date: '2019-12-12', color: 'green', icon: '' },
+		{ id: 3, text: '手写promise', date: '2019-12-11', color: 'yellow', icon: '' },
+		{ id: 2, text: '添加array文档', date: '2019-12-09', color: 'green', icon: '' },
+		{ id: 1, text: '博客生成', date: '2019-12-08', color: 'green', icon: '' },
+	],
 	children: [
 		{
 			name: "响应式原理",

@@ -6,6 +6,7 @@ import ReactMarkdown from 'react-markdown'
 import ScrollItem from './components/ScrollItem'
 import TimeItem from './components/TimeItem'
 import CodeBlock from '../../utils/CodeBlock'
+import { issues } from '../../data/issues'
 import './styles/index.scss'
 
 const { SubMenu } = Menu;
@@ -16,6 +17,8 @@ class Entry extends React.Component {
 		super(props)
 		this.state = {
 			content: introMD,
+			issues: issues,
+			scrollCount: 0,
 			activeTimes: treeData['JavaScript'].time,
 			leftMenu: treeData['JavaScript'],
 			openKeys: [treeData['JavaScript'].children[0].menu],
@@ -32,16 +35,17 @@ class Entry extends React.Component {
 		})	
 	}
 	changeHeaderMenu(text) {
-		console.log(`./${treeData[text].children[0].children[0].menu}`);
 		import(`./${treeData[text].children[0].children[0].menu}`).then(res => {
 			this.setState({
 				content: res.default,
 				leftMenu: treeData[text],
+				activeTimes: treeData[text].time,
 				openKeys: [treeData[text].children[0].menu],
 				defaultChecked: [treeData[text].children[0].children[0].menu]
+			},() => {
+				document.getElementsByClassName('ant-layout')[2].scrollTop = 0
+				document.getElementById('timeline-view').scrollTop = 0
 			})
-		}, () => {
-			document.getElementsByClassName('ant-layout')[2].scrollTop = 0
 		})
 	}
 	onOpenChange = openKeys => {
@@ -55,6 +59,17 @@ class Entry extends React.Component {
 				openKeys: latestOpenKey ? [latestOpenKey] : [],
 			});
 		}
+	}
+
+	componentDidMount() {
+		setInterval(() => {
+			let scroll = document.getElementById('issue-view').scrollTop ++
+			if(scroll - 150 * this.state.scrollCount > 150) {
+				const arr = [...this.state.issues]
+				arr.push(arr.shift())
+				this.setState({scrollCount: this.state.scrollCount + 1, issues: arr})
+			}
+		}, 100)
 	}
 	render() {
 		return (
@@ -113,7 +128,7 @@ class Entry extends React.Component {
 						<ReactMarkdown source={this.state.content} escapeHtml={false} renderers={{code: CodeBlock}}></ReactMarkdown>
 					</Content>
 				</Layout>
-				<Layout style={{ borderLeft: '1px solid #eee', width: '500px' }}>
+				<Layout style={{ borderLeft: '1px solid #aaa', width: '500px' }}>
 					<Content
 						style={{
 							padding: 24,
@@ -123,14 +138,18 @@ class Entry extends React.Component {
 					>
 						<div className="entry--timeline">
 							<h3>时间线</h3>
-							<div className="entry--timeline_container">
+							<div className="entry--timeline_container" id="timeline-view">
 								<TimeItem activeTimes={this.state.activeTimes}></TimeItem>
 							</div>
 						</div>
 						<div className="entry--issue">
 							<h3>issue更新</h3>
-							<div className="entry--issue_container">
-								<ScrollItem></ScrollItem>
+							<div className="entry--issue_container" id='issue-view'>
+								{
+									this.state.issues.map(issue => {
+										return <ScrollItem issue={issue} key={issue.id}></ScrollItem>
+									})
+								}
 							</div>
 						</div>
 					</Content>

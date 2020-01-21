@@ -1,11 +1,11 @@
 import React from 'react';
-
-const ScrollItem = () => {
+const ScrollItem = (props) => {
+	const { text, author } = props.issue
 	return (
 			<div className="entry--issue_item">
 				<div className="entry--issue_left">
-					<h4>Yuxin_Aplha</h4>
-					<p>www.baidu.com</p>
+					<h4>{author}</h4>
+					<p>{text}</p>
 				</div>
 				<div className="entry--issue_right"></div>
 			</div>
