@@ -1,7 +1,7 @@
 import React from 'react';
 import { Layout, Menu, Icon } from 'antd';
 import { navData, treeData } from '../../data/index'
-import introMD from './javascript/array/intro.md'
+import introMD from './javascript/type/type.md'
 import ReactMarkdown from 'react-markdown'
 import ScrollItem from './components/ScrollItem'
 import TimeItem from './components/TimeItem'
@@ -19,6 +19,7 @@ class Entry extends React.Component {
 			content: introMD,
 			issues: issues,
 			scrollCount: 0,
+			activeModule: 'JavaScript',
 			activeTimes: treeData['JavaScript'].time,
 			leftMenu: treeData['JavaScript'],
 			openKeys: [treeData['JavaScript'].children[0].menu],
@@ -38,6 +39,7 @@ class Entry extends React.Component {
 		import(`./${treeData[text].children[0].children[0].menu}`).then(res => {
 			this.setState({
 				content: res.default,
+				activeModule: text,
 				leftMenu: treeData[text],
 				activeTimes: treeData[text].time,
 				openKeys: [treeData[text].children[0].menu],
@@ -76,17 +78,34 @@ class Entry extends React.Component {
 		<div className="entry">
 			<Layout>
     		<Header className="entry--header">
-					<div className="entry--header_logo" />
 					<Menu
 						theme="dark"
 						mode="horizontal"
-						defaultSelectedKeys={['JavaScript']}
 						style={{ lineHeight: '64px' }}
 					>
 						{ navData.map(item => {
-							return <Menu.Item key={item.text} onClick={() => {
-								this.changeHeaderMenu(item.text)
-							}}>{item.text}</Menu.Item>
+							if(item.children) {
+								return (<SubMenu
+									key={item.id}
+									title={
+										<span className="submenu-title-wrapper">
+											{item.text}
+										</span>
+									}
+								>
+									{
+										item.children.map(child => {
+											return <Menu.Item key={child.text} onClick={() => {
+												this.changeHeaderMenu(child.text)
+											}}>{ child.text }</Menu.Item>
+										})
+									}
+								</SubMenu>)
+							} else {
+								return <Menu.Item key={item.text} onClick={() => {
+									this.changeHeaderMenu(item.text)
+								}}>{item.text}</Menu.Item>
+							}
 						}) }
 					</Menu>
     		</Header>
@@ -133,7 +152,7 @@ class Entry extends React.Component {
 						style={{
 							padding: 24,
 							margin: 0,
-							minHeight: 280,
+							minHeight: 280
 						}}
 					>
 						<div className="entry--timeline">

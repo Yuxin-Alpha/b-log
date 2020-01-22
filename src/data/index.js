@@ -12,17 +12,26 @@ export const bubbleData = [
 ]
 
 export const navData = [
-	{id: 1, text: 'JavaScript'},
-	{id: 2, text: 'CSS'},
-	{id: 2.1, text: 'TypeScript'},
-	{id: 3, text: 'Vue'},
-	{id: 4, text: 'React'},
-	{id: 5, text: 'Data'},
-	{id: 6, text: 'GoLang'},
-	{id: 7, text: 'Node'},
-	{id: 8, text: 'Webpack'},
-	{id: 9, text: 'SQL'},
-	{id: 10, text: 'Net'},
+	{id: 'Base', text: 'Base', children: [
+		{id: 'BaseOne', text: 'Data'},
+		{id: 'BaseTwo', text: 'Net'},
+		{id: 'BaseTwo', text: 'Design'}
+	]},
+	{id: 'FrontEnd', text: 'FrontEnd', children: [
+		{id: 'FrontEndOne', text: 'JavaScript'},
+		{id: 'FrontEndTwo', text: 'CSS'},
+		{id: 'FrontEndThree', text: 'TypeScript'},
+		{id: 'FrontEndFour', text: 'Vue'},
+		{id: 'FrontEndFive', text: 'React'},
+		{id: 'FrontEndSix', text: 'Webpack'},
+	]},
+	{id: 'ServerEnd', text: 'ServerEnd', children: [
+		{id: 'ServerEndOne', text: 'Node'},
+		{id: 'ServerEndTwo', text: 'Socket'},
+		{id: 'ServerEndThree', text: 'SQL'},
+		{id: 'ServerEndFour', text: 'Golang'},
+		{id: 'ServerEndFive', text: 'Docker'}
+	]}
 ]
 
 const JavaScript = {
@@ -49,7 +58,7 @@ const JavaScript = {
 			children: [
 				{
 					name: "介绍",
-					menu: 'javascript/type/intro.md'
+					menu: 'javascript/type/type.md'
 				},
 				{
 					name: "类型判断",
@@ -199,28 +208,14 @@ const Node = {
 		{
 			name: "常用模块",
 			menu: 'node1.1',
-			children: [{ name: "path", menu: 'node/use/path.md' }, 
-			{ name: "module", menu: 'node/use/module.md' }]
-		},
-		{
-			name: "buffer",
-			menu: 'node1',
-			children: [{ name: "FlareVis", menu: 'node/buffer/one.md' }, { name: "FlareVis", menu: 'node/buffer/two.md' }]
-		},
-		{
-			name: "fs",
-			menu: 'node2',
-			children: [{ name: "FlareVis", value: 4116 }]
-		},
-		{
-			name: "stream",
-			menu: 'node3',
-			children: [{ name: "IScaleMap", value: 2105 }]
-		},
-		{
-			name: "http",
-			menu: 'node4',
-			children: [{ name: "DirtySprite", menu: 'JavaScript1' }]
+			children: [ 
+				{ name: "path", menu: 'node/use/path.md' }, 
+				{ name: "module", menu: 'node/use/module.md' },
+				{ name: "event", menu: 'node/use/event.md' },
+				{ name: "buffer", menu: 'node/use/buffer.md' },
+				{ name: "stream", menu: 'node/use/stream.md' },
+				{ name: "http", menu: 'node/use/http.md' }
+			]
 		},
 		{
 			name: "koa",

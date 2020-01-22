@@ -10,8 +10,7 @@ true // boolean
 function add() {} //function
 undefined // undefined
 null // object
-Symbol // Symbol
-[] // object
+Symbol() // Symbol
 {} // object
 ```
 上述后面的注释，是<strong>typeof</strong>关键字的返回值
