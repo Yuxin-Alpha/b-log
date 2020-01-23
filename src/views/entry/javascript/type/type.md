@@ -1,6 +1,6 @@
 ## Type of Javascript
 
-探究一个语言总是从变量的类型开始的，<strong>Javascript</strong>作为一个弱类型的语言，在使用变量的时候总会出现令人意想不到的问题。
+我们在学习一门计算机语言的过程中，总是先从变量的类型开始，不过在笔者的认知中，<strong>JavaScript</strong>的变量是没有类型的，只有值才有，因为在Js的世界里并不强制一个变量被赋值的类型一直是同一个类型。
 在Javascript中，类型总共有以下这些:
 
 ```javascript
