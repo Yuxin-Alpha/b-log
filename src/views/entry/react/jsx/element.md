@@ -26,3 +26,38 @@ ReactDOM.render(React.createElement('h1', null, 'simple test'), document.getElem
   type: 'h1'
 }
 ```
+
+所以我们来探究一下这个函数：
+
+```javascript
+function createElement(type, config={}, children) {
+  let propName
+  const props = {}
+  for(propName in config) {
+    props[propName] = config[propName]
+  }
+  let childrenLength = arguments.length - 2
+  if(childrenLength === 1) {
+    props[children] = children
+  }
+  if(childrenLength > 1) {
+    props[children] = Array.from(arguments).slice(2)
+  }
+  return ReactElement(type, props)
+}
+
+function ReactElement(type, props) {
+  const element = {type, props}
+  return element
+}
+
+class Component {
+   // 用来区分类组件和函数组件
+  static isReactComponent = true
+  constructor(props) {
+    this.props = props
+  }
+}
+```
+
+如此我们就产生了一个React元素，这个时候我们要考虑一下这样的一个React元素怎么渲染到页面上。

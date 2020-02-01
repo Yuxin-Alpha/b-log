@@ -371,7 +371,10 @@ const React = {
 		{
 			name: "JSX",
 			menu: "react1",
-			children: [{ name: "createElement()", menu: 'react/jsx/element.md'}]
+			children: [
+				{ name: "createElement()", menu: 'react/jsx/element.md'},
+				{ name: "render()", menu: 'react/jsx/render.md'}
+			]
 		},
 		{
 			name: "组件",
