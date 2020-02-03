@@ -92,15 +92,8 @@ const JavaScript = {
 			name: "String",
 			menu: 'JavaScript2',
 			children: [
-				{
-					name: "正则表达式",
-					menu: 'JavaScript21',
-					children: [
-						{ name: "match()", menu: 'JavaScript211' },
-						{ name: "replace()", menu: 'JavaScript212' }
-					]
-				},
-				{ name: "模板字符串", menu: 'JavaScript3109' },
+				{ name: "正则表达式", menu: 'javascript/string/reg.md' },
+				{ name: "模板字符串", menu: 'JavaScript3109' }
 			]
 		},
 		{
