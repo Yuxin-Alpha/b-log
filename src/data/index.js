@@ -253,9 +253,7 @@ const Data = {
 			name: "线性表",
 			menu: 'linear',
 			children: [
-				{ name: "栈", menu: 'struct/linear/stack.md' },
-				{ name: "队列", menu: 'struct/linear/queue.md' },
-				{ name: "链表", menu: 'struct/linear/link.md' },
+				{ name: "基础", menu: 'struct/linear/base.md' },
 				{ name: "练习", menu: 'struct/linear/example.md' }
 			]
 		},

@@ -1,34 +1,30 @@
-function heapSort(arr) {
-	// 建立大根堆
-	for(let i=0; i<arr.length; i++) {
-		heapInsert(arr,i)
-	}
-	let heapSize = arr.length
-	swap(arr, 0, --heapSize)
-	while(heapSize > 0) {
-		// 调整
-		heapify(arr, 0, heapSize)
-		swap(arr, 0, --heapSize)
-	}
+class Stack {
+  constructor() {
+    this.items = []
+  }
+  // 检验栈是否空
+  isEmpty() {
+    return this.items.length === 0
+  }
+  // 入栈操作
+  enStack(item) {
+    this.items.push(item)
+  }
+  // 出栈操作
+  outStack() {
+		if(this.isEmpty()) {
+			throw new Error('当前栈中无元素')
+		}
+    return this.items.pop()
+  }
+  // 返回栈顶元素
+  getTop() {
+		if(this.isEmpty()) {
+			throw new Error('当前栈中无元素')
+		}
+    return this.items[this.items.length - 1]
+  }
 }
 
-function heapify(arr, index, heapSize) {
-	let left = index * 2 + 1
-	while(left < heapSize) {
-		let largest = left + 1 < heapSize && arr[left + 1] > arr[left] ? left + 1 : left
-		largest = arr[largest] > arr[index] ? largest : index
-		if(largest === index) break
-		swap(arr, largest, index)
-		index = largest
-		left = index * 2 + 1
-	}
-}
-function heapInsert(arr, index) {
-	while(arr[index] > arr[Math.floor((index - 1) / 2)]) {
-		swap(arr, index, Math.floor((index-1)/2))
-		index = Math.floor((index-1)/2)
-	}
-}
-function swap(params) {
-	
-}
+const p = new Stack()
+p.outStack()
