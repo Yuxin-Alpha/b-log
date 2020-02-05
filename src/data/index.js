@@ -246,7 +246,16 @@ const Data = {
 			menu: 'base',
 			children: [
 				{ name: "介绍", menu: 'struct/base/intro.md' },
+				{ name: "位运算", menu: 'struct/base/byte.md' },
 				{ name: "递归", menu: 'struct/base/loop.md' },
+			]
+		},
+		{
+			name: "数组",
+			menu: 'array',
+			children: [
+				{ name: "介绍", menu: 'struct/array/intro.md' },
+				{ name: "练习", menu: 'struct/array/example.md' }
 			]
 		},
 		{
@@ -260,7 +269,9 @@ const Data = {
 		{
 			name: "树",
 			menu: 'tree',
-			children: [{ name: "FlareVis", menu: 'struct/sort/bubble.md' }]
+			children: [{ name: "介绍", menu: 'struct/tree/intro.md' },
+				{ name: "练习", menu: 'struct/tree/example.md' }
+			]
 		},
 		{
 			name: "堆",

@@ -63,3 +63,32 @@ class Queue {
   }
 }
 ```
+
+### 链表
+
+线性结构，从头遍历搜索
+
+```javascript
+class Node{
+  constructor(data, next=null) {
+    this.data = data
+    this.next = next
+  }
+}
+
+class LinkedList{
+  constructor() {
+    this.head = null
+    this.current = this.head
+  }
+  // 成链操作
+  enLinked(node) {
+    if(!this.head) {
+      this.head = node
+    } else {
+      this.current.next = node
+    }
+    this.current = node
+  }
+}
+```
