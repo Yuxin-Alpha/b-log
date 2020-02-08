@@ -89,14 +89,6 @@ const JavaScript = {
 			]
 		},
 		{
-			name: "String",
-			menu: 'JavaScript2',
-			children: [
-				{ name: "正则表达式", menu: 'javascript/string/reg.md' },
-				{ name: "模板字符串", menu: 'JavaScript3109' }
-			]
-		},
-		{
 			name: "Function",
 			menu: 'JavaScript3',
 			children: [
@@ -247,6 +239,7 @@ const Data = {
 			children: [
 				{ name: "介绍", menu: 'struct/base/intro.md' },
 				{ name: "位运算", menu: 'struct/base/byte.md' },
+				{ name: "正则表达式", menu: 'struct/base/reg.md' },
 				{ name: "递归", menu: 'struct/base/loop.md' },
 			]
 		},
