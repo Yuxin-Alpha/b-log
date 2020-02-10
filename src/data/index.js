@@ -23,7 +23,11 @@ export const navData = [
 		{id: 'FrontEndThree', text: 'TypeScript'},
 		{id: 'FrontEndFour', text: 'Vue'},
 		{id: 'FrontEndFive', text: 'React'},
+		{id: 'FrontEnd', text: 'Vue'},
 		{id: 'FrontEndSix', text: 'Webpack'},
+	]},
+	{id: 'MobileEnd', text: 'MobileEnd', children: [
+		{id: 'MobileEndOne', text: 'Flutter'},
 	]},
 	{id: 'ServerEnd', text: 'ServerEnd', children: [
 		{id: 'ServerEndOne', text: 'Node'},
@@ -125,6 +129,62 @@ const JavaScript = {
 				{ name: "async&await", menu: 'javascript/async/async.md' }
 			]
 		}
+	]
+};
+const Flutter = {
+	time: [
+		{ id: 14, text: '完成异步解决方案', date: '2019-12-27', color: 'green', icon: '' },
+		{ id: 13, text: '手写reduce', date: '2019-12-26', color: 'red', icon: '' },
+		{ id: 12, text: 'new添加', date: '2019-12-24', color: 'red', icon: '' },
+		{ id: 11, text: 'Reflect添加', date: '2019-12-23', color: 'green', icon: '' },
+		{ id: 10, text: 'Proxy添加', date: '2019-12-20', color: 'green', icon: '' },
+		{ id: 9, text: 'type添加', date: '2019-12-19', color: 'yellow', icon: '' },
+		{ id: 8, text: '完善this', date: '2019-12-18', color: 'green', icon: '' },
+		{ id: 7, text: '手写深拷贝', date: '2019-12-16', color: 'yellow', icon: '' },
+		{ id: 6, text: '添加this解析', date: '2019-12-15', color: 'red', icon: '' },
+		{ id: 5, text: '对象特性添加', date: '2019-12-14', color: 'yellow', icon: '' },
+		{ id: 4, text: '手写call', date: '2019-12-12', color: 'green', icon: '' },
+		{ id: 3, text: '手写promise', date: '2019-12-11', color: 'yellow', icon: '' },
+		{ id: 2, text: '添加array文档', date: '2019-12-09', color: 'green', icon: '' },
+		{ id: 1, text: '博客生成', date: '2019-12-08', color: 'green', icon: '' },
+	],
+	children: [
+		{
+			name: "Dart",
+			menu: 'Flutter0',
+			children: [
+				{
+					name: "介绍",
+					menu: 'flutter/dart/intro.md'
+				},
+				{
+					name: "类型判断",
+					menu: 'javascript/type/judge.md'
+				},
+				{
+					name: "强制类型转化",
+					menu: 'javascript/type/transfer.md'
+				}
+			]
+		},
+		{
+			name: "组件",
+			menu: 'Flutter1',
+			children: [
+				{
+					name: "介绍",
+					menu: 'flutter/component/intro.md'
+				},
+				{
+					name: "类型判断",
+					menu: 'javascript/type/judge.md'
+				},
+				{
+					name: "强制类型转化",
+					menu: 'javascript/type/transfer.md'
+				}
+			]
+		},
 	]
 };
 const CSS = {
@@ -715,5 +775,6 @@ export const treeData = {
 	Vue,
 	GoLang,
 	Webpack,
+	Flutter,
 	SQL
 };
