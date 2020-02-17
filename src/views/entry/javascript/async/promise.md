@@ -192,4 +192,50 @@ function resolvePromise(promise, x, resolve, reject) {
     resolve(x)
   }
 }
+
+```
+
+此时还差最后一步：就是，promise可以像以下这种方式调用
+> promise.then().then().then(y => { console.log(y) })
+
+这时我们就需要在then函数的第一步先
+
+```javascript
+//...
+then(onFulfilled, onRejected) {
+  onFulfilled = typeof onFulfilled === 'function' ? onFulfilled : value => value
+  onRejected = typeof onRejected === 'function' ? onRejected : err => { throw new Error(err) }
+  // ...
+}
+```
+
+接下来，我们再实现一下Promise的常用Api
+
+```javascript
+Promise.prototype.catch = (rejectFunc) => {
+  return this.then(null, rejectFunc)
+}
+
+Promise.resolve = (data) => {
+  return new Promise((resolve, reject) => {
+    resolve(data)
+  })
+}
+
+Promise.reject = (reason) => {
+  return new Promise((resolve, reject) => {
+    reject(reason)
+  })
+}
+
+Promise.all = (values) => {
+  return new Promise((resolve, reject) => {
+    let results = []
+    let i = 0
+    let processData = (value, index) => {
+      results[index] = value
+    }
+    if(++)
+  })
+}
 ```
