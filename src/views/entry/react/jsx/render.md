@@ -5,11 +5,16 @@ function render(element, parentNode) {
   if(typeof element === 'string' || typeof element === 'number') {
     return parentNode.appendChild(document.createTextNode(element))
   }
-  let { type, props } = element
+	let type = element.type
+	let props = element.props
   if(type.isReactComponent) {
-    { type, props }  = (new type()).render()
+		let returnedElement = (new type()).render()
+		type = returnedElement.type
+		props = returnedElement.props
   }else {
-    { type, props }  = type(props)
+		let returnedElement = type(props)
+		type = returnedElement.type
+		props = returnedElement.props
   }
   let domElement = document.createElement(type)
   for(let propName in props) {
