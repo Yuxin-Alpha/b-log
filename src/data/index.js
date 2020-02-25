@@ -23,7 +23,6 @@ export const navData = [
 		{id: 'FrontEndThree', text: 'TypeScript'},
 		{id: 'FrontEndFour', text: 'Vue'},
 		{id: 'FrontEndFive', text: 'React'},
-		{id: 'FrontEnd', text: 'Vue'},
 		{id: 'FrontEndSix', text: 'Webpack'},
 	]},
 	{id: 'MobileEnd', text: 'MobileEnd', children: [
@@ -567,10 +566,7 @@ const Vue = {
 			name: "Vuex",
 			menu: 'Vue7',
 			children: [
-				{ name: "state", menu: 'vue/store/state.md' },
-				{ name: "getter", menu: 'vue/store/getter.md' },
-				{ name: "action", menu: 'vue/store/action.md' },
-				{ name: "mutation", menu: 'vue/store/mutation.md' }
+				{ name: "使用", menu: 'vue/vuex/use.md' }
 			]
 		},
 		{
