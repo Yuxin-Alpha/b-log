@@ -1,3 +1,5 @@
+// import bubbleData from './bubble'
+// import navData from './nav'
 export const bubbleData = [
 	{id: 1, text: 'JS', position: 'left'},
 	{id: 2, text: 'CSS', position: 'left'},
@@ -517,10 +519,10 @@ const Vue = {
 		{ id: 7, text: '手写深拷贝', date: '2019-12-16', color: 'yellow', icon: '' },
 		{ id: 6, text: '添加this解析', date: '2019-12-15', color: 'red', icon: '' },
 		{ id: 5, text: '对象特性添加', date: '2019-12-14', color: 'yellow', icon: '' },
-		{ id: 4, text: '手写call', date: '2019-12-12', color: 'green', icon: '' },
-		{ id: 3, text: '手写promise', date: '2019-12-11', color: 'yellow', icon: '' },
-		{ id: 2, text: '添加array文档', date: '2019-12-09', color: 'green', icon: '' },
-		{ id: 1, text: '博客生成', date: '2019-12-08', color: 'green', icon: '' },
+		{ id: 4, text: '理解自定义指令', date: '2020-01-11', color: 'red', icon: '' },
+		{ id: 3, text: '编写指令相关', date: '2020-01-11', color: 'green', icon: '' },
+		{ id: 2, text: '添加数组拓展', date: '2020-01-09', color: 'yellow', icon: '' },
+		{ id: 1, text: '添加数据劫持', date: '2020-01-08', color: 'green', icon: '' },
 	],
 	children: [
 		{
@@ -544,34 +546,34 @@ const Vue = {
 			menu: 'Vue2',
 			children: [
 				{ name: "LifeCycle", menu: 'vue/component/life.md' },
-				{ name: "通信", menu: 'vue/component/emit.md' }
+				{ name: "函数式组件", menu: 'vue/component/func.md' },
+				{ name: "通信", menu: 'vue/component/trans.md' }
 			]
 		},
 		{
-			name: "事件处理",
-			menu: 'Vue4',
-			children: [{ name: "介绍", menu: 'vue/event/event.md' }]
-		},
-		{
-			name: "Mixins",
-			menu: 'Vue5',
-			children: [{ name: "介绍", menu: 'vue/mixin/mixins.md' }]
+			name: "插件",
+			menu: 'Vue3',
+			children: [
+				{ name: "mixin", menu: 'vue/plugins/mixin.md' }
+			]
 		},
 		{
 			name: "Router",
-			menu: 'Vue6',
-			children: [{ name: "介绍", menu: 'vue/router/router.md' }, { name: "源码", menu: 'vue/router/resource.md' }]
+			menu: 'Vue4',
+			children: [{ name: "介绍", menu: 'vue/router/router.md' }, 
+			{ name: "源码", menu: 'vue/router/resource.md' }]
 		},
 		{
 			name: "Vuex",
-			menu: 'Vue7',
+			menu: 'Vue5',
 			children: [
-				{ name: "使用", menu: 'vue/vuex/use.md' }
+				{ name: "使用", menu: 'vue/vuex/use.md' },
+				{ name: "源码", menu: 'vue/vuex/source.md' }
 			]
 		},
 		{
 			name: "Vue3.0",
-			menu: 'Vue8',
+			menu: 'Vue6',
 			children: [
 				{ name: "state", menu: 'vue/version/state.md' },
 				{ name: "getter", menu: 'vue/version/getter.md' },
@@ -581,7 +583,7 @@ const Vue = {
 		},
 		{
 			name: "使用拓展",
-			menu: 'Vue9',
+			menu: 'Vue7',
 			children: [
 				{ name: "使用拓展1", menu: 'vue/extend/one.md' },
 				{ name: "使用拓展2", menu: 'vue/extend/two.md' }

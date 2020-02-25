@@ -20,14 +20,14 @@ import vuex from 'vuex'
 // ... state, mutations, getters, actions 的引入
 Vue.use(vuex)
 
-export default new vuex.newStore({
+export default new vuex.Store({
 	state, mutations, actions, getters
 })
 
 // main.js 中 注册state
-import state from './state'
+import store from './state'
 new Vue({
-	state
+	store
 	//...
 })
 
@@ -100,4 +100,16 @@ export default {
 		})
 	}
 }
+```
+
++ mapMutations
+
+```javascript
+// 
+```
+
++ mapActions
+
+```javascript
+// 
 ```
