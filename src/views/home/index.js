@@ -62,7 +62,7 @@ const Home = () => {
 					</HomeModel>
 				</div>
 				<div className="home--link">
-					<HomeModel title={'相关链接'}>
+					<HomeModel title={'联系我'}>
 					</HomeModel>
 				</div>
 			</div>
