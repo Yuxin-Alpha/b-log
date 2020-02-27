@@ -25,6 +25,7 @@ export default new vuex.Store({
 })
 
 // main.js 中 注册state
+
 import store from './state'
 new Vue({
 	store
