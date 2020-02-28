@@ -498,7 +498,7 @@ const React = {
 			name: "Redux",
 			menu: "react10",
 			children: [
-				{ name: "介绍", menu: 'react/redux/intro.md' },
+				{ name: "源码", menu: 'react/redux/source.md' },
 				{ name: "react-redux", menu: 'react/redux/react.md' },
 				{ name: "redux-thunk", menu: 'react/redux/thunk.md' },
 				{ name: "redux-saga", menu: 'react/redux/saga.md' }
