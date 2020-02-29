@@ -87,3 +87,41 @@ function isPlainObject(action) {
   return Object.getPrototypeOf(obj) === proto
 }
 ```
+
+这个时候我们就完成了一个简单的redux，但是这里还缺一个东西，为了让我们的store可以拆分，我们不能只是将一个项目所有的数据都放到一个地方，而是可以分块管理：
+
+```javascript
+import counter1 from '../reducers/counter1'
+import counter2 from '../reducers/counter2'
+const reducers = combineReducers({
+  counter1,
+  counter2
+})
+
+const store = createStore(reducers)
+console.log(store) // => { counter1: 0, counter2: 0 }
+// 使用
+store.getState().counter1
+```
+
+如何实现这个combineReducer呢？
+
+```javascript
+/**
+ * @参数：reducers 一个对象，每个键值对 对应一个reducer
+ * @返回值： 一个函数，是一个整合过的reducer，这个函数返回一个state,也就是我们整体的store
+*/
+function combineReducer(reducers) {
+  const reducerKeys = Object.keys(reducers)
+  return function(state={}, action) {
+    const nextState = {}
+    reducerKeys.forEach(key => {
+      const reducer = reducerKey[key]
+      const previousStateForKey = state[key]
+      const nextStateForKey = reducer(previousStateForKey, action)
+      nextState[key] = nextStateForKey
+    })
+    return nextState
+  }
+}
+```
