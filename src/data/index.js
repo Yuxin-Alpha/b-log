@@ -530,7 +530,8 @@ const Vue = {
 			menu: 'Vue0',
 			children: [
 				{ name: "模板解析", menu: 'vue/template/data.md' },
-				{ name: "虚拟DOM", menu: 'vue/template/vdom.md' }
+				{ name: "虚拟DOM", menu: 'vue/template/vdom.md' },
+				{ name: "标签判断", menu: 'vue/template/judge.md' }
 			]
 		},
 		{
