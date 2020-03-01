@@ -28,7 +28,8 @@ function render(element, parentNode) {
         })}:${styleObj[attr]}`
       }).join(';')
     } else if(propName = 'children') {
-      let children = Array.isArray(props.children) ? props.children : [props.children]
+      let children = Array.isArray(props.children) ?  props.children : [props.children]
+      children.forEach(child=>render(child, domElement))
     } else {
       domElement.setAttribute(propName, props[propName])
     }

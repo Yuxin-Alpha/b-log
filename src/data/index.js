@@ -526,16 +526,24 @@ const Vue = {
 	],
 	children: [
 		{
+			name: "数据驱动",
+			menu: 'Vue0',
+			children: [
+				{ name: "模板解析", menu: 'vue/template/data.md' },
+				{ name: "虚拟DOM", menu: 'vue/template/vdom.md' }
+			]
+		},
+		{
 			name: "响应式原理",
-			menu: 'Vue3',
+			menu: 'Vue1',
 			children: [{ name: "数据劫持", menu: 'vue/design/define.md' },
-			{ name: "数组拓展", menu: 'vue/design/array.md' },
-			{ name: "Proxy拓展", menu: 'vue/design/proxy.md' }
-		]
+				{ name: "数组拓展", menu: 'vue/design/array.md' },
+				{ name: "Proxy拓展", menu: 'vue/design/proxy.md' }
+			]
 		},
 		{
 			name: "指令",
-			menu: 'Vue1',
+			menu: 'Vue2',
 			children: [
 				{ name: "官方指令", menu: 'vue/directive/intro.md' },
 				{ name: "自定义指令", menu: 'vue/directive/v_directive.md', children: [{ name: "LifeCycle", value: 4116 }] }
@@ -543,7 +551,7 @@ const Vue = {
 		},
 		{
 			name: "组件",
-			menu: 'Vue2',
+			menu: 'Vue3',
 			children: [
 				{ name: "LifeCycle", menu: 'vue/component/life.md' },
 				{ name: "函数式组件", menu: 'vue/component/func.md' },
@@ -552,20 +560,20 @@ const Vue = {
 		},
 		{
 			name: "插件",
-			menu: 'Vue3',
+			menu: 'Vue4',
 			children: [
 				{ name: "mixin", menu: 'vue/plugins/mixin.md' }
 			]
 		},
 		{
 			name: "Router",
-			menu: 'Vue4',
+			menu: 'Vue5',
 			children: [{ name: "介绍", menu: 'vue/router/router.md' }, 
 			{ name: "源码", menu: 'vue/router/resource.md' }]
 		},
 		{
 			name: "Vuex",
-			menu: 'Vue5',
+			menu: 'Vue6',
 			children: [
 				{ name: "使用", menu: 'vue/vuex/use.md' },
 				{ name: "源码", menu: 'vue/vuex/source.md' }
@@ -573,7 +581,7 @@ const Vue = {
 		},
 		{
 			name: "Vue3.0",
-			menu: 'Vue6',
+			menu: 'Vue7',
 			children: [
 				{ name: "state", menu: 'vue/version/state.md' },
 				{ name: "getter", menu: 'vue/version/getter.md' },
@@ -583,7 +591,7 @@ const Vue = {
 		},
 		{
 			name: "使用拓展",
-			menu: 'Vue7',
+			menu: 'Vue8',
 			children: [
 				{ name: "使用拓展1", menu: 'vue/extend/one.md' },
 				{ name: "使用拓展2", menu: 'vue/extend/two.md' }
