@@ -30,7 +30,7 @@ methodsList.forEach(item => {
   proto[item] = function() {
     update();
     // 原有功能
-    arrProto[item].call(this, ...arguments)
+    arrProto[item].apply(this, arguments)
   }
 })
 let list  = [1, 2, 3]

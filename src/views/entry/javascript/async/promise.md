@@ -234,8 +234,20 @@ Promise.all = (values) => {
     let i = 0
     let processData = (value, index) => {
       results[index] = value
+      if(++i === results.length) {
+        resolve(results)
+      }
     }
-    if(++)
+    for(let i = 0; i < values.length; i++) {
+      let current = values[i]
+      if(isPromise(current)) {
+          current.then(data => {
+            processData(data, i)
+        }, reject)
+      } else {
+        processData(current, i)
+      }
+    }
   })
 }
 ```

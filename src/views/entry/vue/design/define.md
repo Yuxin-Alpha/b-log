@@ -25,11 +25,11 @@ function observe(target) {
   for(let key in target) {
     // 为了在defineProperty 函数中不声明变量而获得并保存对象原来的初始值
     // 这里需要多传递一层函数
-    reactTiveUpdate(target, key, target[key])
+    reactiveUpdate(target, key, target[key])
   }
 }
 
-function reactTiveUpdate(target, key, value) {
+function reactiveUpdate(target, key, value) {
   // 递归，深度监听对象的属性
   observe(target[key])
   Object.defineProperty(target, key, {
